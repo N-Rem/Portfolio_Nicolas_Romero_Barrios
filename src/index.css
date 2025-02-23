@@ -1,21 +1,88 @@
-:root{
-    --midnightblue: #132644; 
-    --darkslategray: #46434C; 
-    --watermelon: rgb(253, 150, 155); 
-    --lightbrownyellow: rgb(255, 198, 116); 
-    --lightbrownyellow2: rgb(255, 187, 102);
-    --white: #ECEDEE;
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  
-  html{
-    font-family: "Roboto", serif;
-    background-color: var(--lightbrownyellow);
-    overflow-x: hidden;
-  }
+:root {
+  --black           : #042222;
+  --blackT          : rgba(4, 34, 34, 0.5);
+  --white           : rgb(241, 247, 247);
+  --whiteT          : rgba(241, 247, 247, 0.5);
+  --dark-green      : #03624c;
+  --dark-greenT     : rgba(3, 98, 76, 0.5);
+  --pastel-green    : #2cc295;
+  --pastel-greenT   : rgba(44, 194, 149, 0.5);
+  --strong-green    : #00df82;
+  --strong-greenT   : rgba(0, 223, 130, 0.5);
+  --cyberpunk-yellow: #DAFF3E;
+
+  --main-font: 'Roboto Mono', monospace;
+
+}
+
+* {
+  box-sizing : border-box;
+  font-family: var(--main-font);
+  color      : var(--black)
+}
+
+
+
+html {
+  font-family     : var(--main-font);
+  background-color: var(--white);
+  max-width       : 1400px;
+  padding         : 0;
+  margin          : 0;
+  overflow-x      : hidden;
+}
+
+
+body {
+  display        : flex;
+  justify-content: center;
+  justify-self   : center;
+  align-items    : center;
+  flex-direction : column;
+  margin         : 0;
+}
+
+h1 {
+  font-size: 6.25rem;
+}
+
+h2 {
+  font-size: 5.625rem;
+
+}
+
+h3 {
+  font-size: 3.125rem;
+
+}
+
+p {
+  font-size: 1.125rem;
+
+}
+
+header {
+  width: 100vw;  
+  height: auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--strong-greenT );
+  z-index: 1000;
+}
+
+.p-btn {
+  font-size      : 1rem;
+  text-decoration: none;
+}
+
+.flex-container-column {
+  /*elementos uno arriba de otro como columnas.*/
+  display        : flex;
+  justify-content: center;
+  justify-self   : center;
+  align-items    : center;
+  flex-direction : column;
+  margin         : 0;
+  padding        : 0;
+}

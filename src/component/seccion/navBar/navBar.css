@@ -1,0 +1,29 @@
+/*btn individual y grupal navbar*/
+.btn-nav-bar, .btns-navbar{
+  display        : flex;
+  justify-content: center;
+  justify-self   : center;
+  align-items    : center;
+  flex-direction : row;
+  gap: 1rem;
+  padding: .5rem;
+}
+
+.btns-navbar{
+  width: auto;
+  height: auto;
+}
+
+.nav{
+  width: auto;
+  
+}
+
+
+
+
+
+
+
+
+
