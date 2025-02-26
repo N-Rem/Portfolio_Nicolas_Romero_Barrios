@@ -1,29 +1,139 @@
+header {
+  background-color: var(--strong-greenT);
+  overflow        : hidden;
+  position        : relative;
+  padding         : 1.3rem;
+
+}
+
 /*btn individual y grupal navbar*/
-.btn-nav-bar, .btns-navbar{
-  display        : flex;
+.btn-nav-bar {
+  gap    : .5rem;
+  padding: 0;
+  margin : 0;
+
+  display    : inline-flex;
+  width      : auto;
+  min-width  : fit-content;
+  white-space: nowrap;
+}
+
+.btns-navbar {
+  width          : 1vw;
+  height         : 1vh;
   justify-content: center;
+  justify-items  : center;
+  gap            : 3vw;
+  position       : absolute;
+  font-size      : 1rem;
+}
+
+.btns-navbar button {
+  border          : none;
+  background-color: transparent;
+  font-size       : 1rem;
+}
+
+.btn-nav-bar img {
+  width : 30px;
+  height: 30px;
+}
+
+.btn-nav-bar:hover {
+  border-bottom: 5px solid var(--strong-green);
+
+}
+
+
+/*--- burger menu ---*/
+
+.menu-burger {
+  position       : fixed;
+  width          : 100%;
+  display        : flex;
+  flex-direction : row;
+  justify-content: right;
   justify-self   : center;
   align-items    : center;
-  flex-direction : row;
-  gap: 1rem;
-  padding: .5rem;
+  display        : none;
+
 }
 
-.btns-navbar{
-  width: auto;
-  height: auto;
+.visible {
+  display: flex;
 }
 
-.nav{
-  width: auto;
-  
+.menu-burger button {
+  border          : none;
+  background-color: transparent;
 }
 
+.menu-burger img {
+  width : 30px;
+  height: 30px;
+}
 
+.menu-burger-container {
+  position        : fixed;
+  left            : 81vw;
+  /*Donde se coloca el  menu cuando se abre*/
+  top             : -5vw;
+  background-color: var(--strong-greenT);
+  border-radius   : 50vw;
+  padding         : 6vw;
+  height          : 21vw;
+  width           : 22vw;
+  max-width       : 301px;
+  max-height      : 297px;
 
+  display        : flex;
+  align-items    : flex-start;
+  justify-content: flex-start;
+  overflow       : hidden;
 
+}
 
+.menu-burger-content {
+  display        : flex;
+  flex-direction : column;
+  align-items    : flex-start;
+  justify-content: flex-start;
 
+  width      : auto;
+  white-space: nowrap;
 
+}
 
+.p-btn {
+  color    : var(--black);
+  font-size: 1.5vw;
+  transition: transform 0.2s ease-in-out;
+}
 
+.menu-burger-content button {
+  border          : none;
+  background-color: transparent;
+}
+
+.p-btn:hover {
+  color      : var(--pastel-green);
+  transform: scale(1.2);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 910px) {
+  header {
+    background: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-burger-container {
+    max-width : 198px;
+    max-height: 189px;
+    display   : flex;
+  }
+
+}

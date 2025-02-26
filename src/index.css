@@ -27,6 +27,7 @@ html {
   font-family     : var(--main-font);
   background-color: var(--white);
   max-width       : 1400px;
+  width: 100%;
   padding         : 0;
   margin          : 0;
   overflow-x      : hidden;
@@ -67,8 +68,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--strong-greenT );
   z-index: 1000;
+  padding: .5rem;
+  margin: 1rem;
 }
 
 .p-btn {
@@ -84,5 +86,13 @@ header {
   align-items    : center;
   flex-direction : column;
   margin         : 0;
-  padding        : 0;
+}
+
+
+.flex-container-row {
+  display        : flex;
+  justify-content: center;
+  justify-self   : center;
+  align-items    : center;
+  flex-direction : row;
 }

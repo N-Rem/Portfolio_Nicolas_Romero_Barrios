@@ -1,15 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import PropTypes from "prop-types";
 
 const BtnNavBar = ({ textBtn, href, img, alt }) => {
-  const link = `#${href}`;
+
   const src = `/public/icons/navbar/icon-${img}.svg`;
 
+  const navigate = useNavigate();
+
   return (
-    <div className="btn-nav-bar">
+    <div className="btn-nav-bar flex-container-row" onClick={()=>navigate(href)}>
       <img src={src} alt={alt} />
-      <a className="p-btn" href={link}>
+      <a>
         {textBtn}
       </a>
     </div>

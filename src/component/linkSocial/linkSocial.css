@@ -1,0 +1,11 @@
+.content-social{ 
+    gap: 4vw;
+}
+
+.icons img:hover {
+    transform : translateY(-10px);
+}
+
+.icons img:hover {
+    transform: scale(1.1);
+}

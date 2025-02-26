@@ -1,55 +1,58 @@
 import React from "react";
 
 import "./footer.css";
+import LinkSocial from "../../linkSocial/LinkSocial";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const btns = [
+    { textBtn: "Inicio", href: "/#home" },
+    { textBtn: "Tecnologias", href: "/#tech" },
+    {
+      textBtn: "Portfolio",
+      href: "/#portfolio",
+    },
+    {
+      textBtn: "Contacto",
+      href: "/#contact",
+    },
+  ];
+
+  const navegate = useNavigate();
+
+  const handlerBtnNav = (url) => {
+    navegate(url);
+  };
+
   return (
     <footer>
-      <div className="foteer-container">
-        <div className="footer-logo">
-          <a href="#hero" className="logo-icon-container">
-            <img
-              className="logo-icon"
-              src="/Logo-completo.svg"
-              alt="Logo Nicolas Romero barrios"
-            />
+      <div className="footer-container flex-container-row">
+        <div className="content-name">
+          <a className="p-btn" onClick={() => handlerBtnNav("/#home")}>
+            <h1>Nicolas Romero barrios</h1>
           </a>
-          <span className="footer-phrase">
-            Aprendiendo constantemente para brindar soluciones
-          </span>
+          <h2>Developer FullStack</h2>
+          <p>Aprendiendo constantemente para brindar soluciones</p>
         </div>
-        <div className="footer-social">
-          <span>Encontrame acá</span>
-          <div className="container-redes">
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <img
-                className="icon-linkedin"
-                src="/icons/linkedin.svg"
-                alt="LinkedIn"
-              />
-            </a>
-            <a
-              href="https://para embiar un email.com"
-              target="_blank"
-              aria-label="e-mail"
-            >
-              <img
-                className="icon-email"
-                src="/icons/e-mail-icon.svg"
-                alt="e-mzil"
-              />
-            </a>
+
+        <div className="content-social-copy">
+          <LinkSocial />
+          <div className="copyright">
+            <p>@2025 Desarrollado por Nicolas Alejandro Romero Barrios.</p>
           </div>
         </div>
-      </div>
-      <div className="copyright">
-        <span className="copyright-content">
-          @2025 Desarrollado por Nicolas Alejandro Romero Barrios.
-        </span>
+
+        <div className="content-nav">
+          {btns.map((btn, i) => (
+            <a
+              key={i}
+              className="p-btn"
+              onClick={() => handlerBtnNav(btn.href)}
+            >
+              {btn.textBtn}
+            </a>
+          ))}
+        </div>
       </div>
     </footer>
   );
