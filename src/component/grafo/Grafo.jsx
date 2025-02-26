@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Grafo = () => {
-    
+
   return (
-    <canvas></canvas>
+    <canvas className='canvas-grafo'></canvas>
   )
 }
 
