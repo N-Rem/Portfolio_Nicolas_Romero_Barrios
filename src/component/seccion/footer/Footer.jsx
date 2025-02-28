@@ -23,7 +23,6 @@ const Footer = () => {
   const handlerBtnNav = (url) => {
     navegate(url);
   };
-
   return (
     <footer>
       <div className="footer-container flex-container-row">
