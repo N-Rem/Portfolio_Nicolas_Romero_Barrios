@@ -1,0 +1,75 @@
+.hero-container {
+    position  : relative;
+    width     : 100vw;
+    min-height: 100vh;
+    overflow  : hidden;
+    gap       : 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container {
+    position: absolute;
+    top     : 0;
+}
+
+.grafo-container {
+    position: absolute;
+    /*absolute hace que .grafo-hero se posicione dentro de su contenedor .hero-container que no se salga de su contendeor padre.*/
+    top     : 0;
+    /* asegura que empieze desde arriba y desde la izquierda*/
+    left    : 0;
+    width   : 100%;
+    height  : 100%;
+    z-index : -1;
+    margin: 0;
+    padding: 0;
+
+}
+
+.hero-container h1 {
+    font-size  : clamp(0.5rem, 0.625vw + 2.625rem, 5.25rem);
+    font-weight: bold;
+    text-align : center;
+    transition: 2s;
+}
+
+.hero-container h2 {
+    font-weight: lighter;
+    text-align : center;
+    transition: 2s;
+
+
+}
+
+.hero-container h1:hover,
+.hero-container h2:hover {
+    transform: scale(1.1);
+
+
+}
+
+
+
+.hero-container h1::before,
+.hero-container h2::before {
+    content         : "";
+    position        : absolute;
+    bottom          : 0;
+    left            : 50%;
+    width           : 0;
+    height          : 3px;
+    background-color: var(--cyberpunk-yellow);
+    transition      : width 0.5s ease, left 0.5s ease;
+  }
+  
+  .hero-container h1:hover::before,
+  .hero-container h2:hover::before {
+    width: 100%;
+    left : 0;
+  }
+
+.social-container {
+    position: relative;
+    z-index : 1;
+}

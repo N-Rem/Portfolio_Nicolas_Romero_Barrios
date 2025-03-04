@@ -1,0 +1,143 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        /* Inicio: sin rotación */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* Fin   : rotación completa */
+    }
+}
+
+@keyframes write {
+    from {
+        width: 85%
+    }
+
+    to {
+        width: 0%
+    }
+}
+
+@keyframes cursorAnimation {
+    from {
+        border-left: 4px solid var(--pastel-green);
+    }
+    to{
+        border-left: 1px solid var(--pastel-green);
+    }
+}
+
+
+
+#about {
+    font-weight: lighter;
+    text-align : center;
+    transition : 2s;
+    margin     : 0;
+    padding    : 0;
+}
+
+#about:hover {
+    transform: scale(1.1);
+}
+
+#about::before {
+    content         : "";
+    position        : absolute;
+    bottom          : 0;
+    left            : 50%;
+    width           : 0;
+    height          : 3px;
+    background-color: var(--cyberpunk-yellow);
+    transition      : width 0.5s ease, left 0.5s ease;
+}
+
+#about:hover::before {
+    width: 100%;
+    left : 0;
+}
+
+.about-container {
+    position  : relative;
+    width     : 100vw;
+    height    : auto;
+    margin-top: .5rem;
+
+    gap: 8rem;
+
+
+}
+
+.photo-container {
+    padding  : 0;
+    margin   : 0;
+    width    : clamp(8.5rem, 8.5vw + 8.5rem, 16.3rem);
+    height   : auto;
+    animation: spin 2s linear infinite;
+}
+
+.photo-container img {
+    width     : clamp(8.5rem, 8.5vw + 8.5rem, 16rem);
+    height    : auto;
+    transition: 2s;
+
+}
+
+.photo-container img:hover {
+    transform: scale(1.1);
+}
+
+.content-container {
+    margin-left: 2rem;
+    gap        : 1rem;
+    padding    : 0;
+
+    width : clamp(16rem, 16vw + 16rem, 32rem);
+    height: auto;
+}
+
+.content-container p {
+    font-size : clamp(.5rem, .6vw + .6rem, 1rem);
+    word-wrap : break-word;
+    text-align: left;
+
+    max-width: 100%;
+
+}
+
+.pharagraf-machin span{
+    position   : absolute;
+    right      : 6vw;
+    /* left: 0vw; */
+    width      : 0;
+    background : var(--white);
+    border-left: 3px solid var(--cyberpunk-yellow);
+    animation  : write 5s steps(30) forwards, cursorAnimation 1s infinite alternate;
+}
+
+/* Seccion CV*/
+.buttonCv-container{
+    margin-top: 2rem;
+    gap:2rem;
+}
+
+
+
+@media(max-width: 750px) {
+    .about-container {
+        flex-direction: column;
+        gap           : 0;
+    }
+
+    .content-container {
+        margin-top : 1rem;
+        margin-left: 0;
+    }
+
+    .content-container p {
+        text-align: center;
+
+    }
+}

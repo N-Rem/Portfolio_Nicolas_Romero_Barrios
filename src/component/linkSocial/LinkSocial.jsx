@@ -1,11 +1,12 @@
 import React from "react";
 import '/src/component/linkSocial/linkSocial.css'
+import PropTypes from "prop-types";
 
-const LinkSocial = ({ size, hero }) => {
+const LinkSocial = ({ size, isForhero }) => {
   return (
     <div className={`flex-container-row content-social ${size}`}>
-      {hero ? (
-        <div className="icons">
+      {isForhero ? (
+        <div className={isForhero ? `icons big`:`icons`}>
           <a
             href="https://github.com/N-Rem"
             target="_blank"
@@ -15,7 +16,7 @@ const LinkSocial = ({ size, hero }) => {
           </a>
         </div>
       ) : (
-        <div className="icons">
+        <div className="email">
           <a
             href="https://nicolasromero.barrios@gmail.com"
             target="_blank"
@@ -25,13 +26,17 @@ const LinkSocial = ({ size, hero }) => {
           </a>
         </div>
       )}
-      <div className="icons">
+      <div className={isForhero ? `icons big`:`icons`}>
         <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
           <img src="/icons/social/linkedin-icon.svg" alt="LinkedIn" />
         </a>
       </div>
     </div>
   );
+};
+
+LinkSocial.propTypes = {
+  isForhero: PropTypes.bool,
 };
 
 export default LinkSocial;

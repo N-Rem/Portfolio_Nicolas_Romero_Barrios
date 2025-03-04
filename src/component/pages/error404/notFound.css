@@ -1,4 +1,4 @@
-.main-error {
+.error-container {
     width: 100vw;
     height: 100vh;
     background-image: url('/imgs/error404-green.svg');

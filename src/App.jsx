@@ -1,7 +1,10 @@
 import { useState } from "react";
 import MainLayout from "/src/component/seccion/mainLayout/MainLayout.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Error404 from "./component/pages/error404/Error404";
+import NotFound from "./component/pages/error404/NotFound";
+import Hero from "./component/hero/Hero";
+import About from "./component/pages/aboutMe/about";
+import Experience from "./component/pages/experience/Experience";
 
 function App() {
   const router = createBrowserRouter([
@@ -9,16 +12,16 @@ function App() {
       path: "/",
       element: (
         <MainLayout>
-          <h1>Holas</h1>
-          <h1>Bolas</h1>
-          <h1>Bolas</h1>
+          <Hero/>
+          <About/>
+          <Experience/>
         </MainLayout>
       ),
     },
     {
       path: "/*",
       element: (
-          <Error404/>
+          <NotFound/>
       ),
     },
   ]);
