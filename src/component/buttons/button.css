@@ -1,0 +1,58 @@
+.button {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    background      : transparent;
+    position        : relative;
+    transition      : 2s;
+    /* width        : 50%; */
+    padding         : 0;
+    margin          : 0;
+    --strong-greenT2: rgba(0, 223, 130, 0.3);
+
+}
+
+.button:hover {
+    scale: 1.1;
+}
+
+.button:active {
+    scale: 0.9;
+}
+
+.btn-text {
+    padding        : .6rem .5rem;
+    margin         : 0;
+    font-size      : 25px;
+    /*agregar clamp*/
+    color          : var(--dark-green);
+    border         : 2px solid var(--strong-greenT3);
+    border-radius  : 15px;
+    background     : var(--strong-greenT3);
+    backdrop-filter: blur(15px);
+    cursor         : pointer;
+    z-index        : 1;
+    transition     : 0.2s;
+}
+
+.button::before {
+    content      : '';
+    position     : absolute;
+    left         : 50%;
+    transform    : translateX(-50%);
+    bottom       : 5px;
+    width        : 25%;
+    height       : 10px;
+    background   : var(--cyberpunk-yellow);
+    border-radius: 10px;
+    transition   : .5s;
+    box-shadow   : 0 0 10px var(--strong-greenT);
+}
+
+.button:hover::before {
+    bottom             : 0;
+    height             : 60%;
+    width              : 90%;
+    border-radius      : 30px;
+    /* transition-delay: 0.1s; */
+}

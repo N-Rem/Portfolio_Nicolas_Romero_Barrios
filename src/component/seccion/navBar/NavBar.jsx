@@ -2,8 +2,9 @@ import { React, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./navBar.css";
 import BtnNavBar from "/src/component/seccion/navBar/BtnNavBar.jsx";
+import PropTypes from "prop-types";
 
-const NavBar = () => {
+const NavBar = ({ isForhero }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showBurger, setShowBurger] = useState(false);
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ const NavBar = () => {
         setShowBurger(false);
       }
     };
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
 
     // Ejecutar una vez al cargar para detectar el tamaño inicial
@@ -75,62 +76,77 @@ const NavBar = () => {
   ];
 
   return (
-    <header className="flex-container-column">
-      {/* Menu burger */}
-      <div
-        className={`menu-burger ${
-          showBurger && menuOpen === false ? "visible" : ""
-        }`}
-      >
-        <button
-          onClick={toggleMenu}
-          aria-expanded={menuOpen}
-          aria-controls="menu"
-        >
-          <img src="/public/icons/navbar/icon-menu.svg" alt="menu" />
-        </button>
-      </div>
-      {menuOpen && (
-        <div className="menu-burger-container">
-          <div className="menu-burger-content">
-            {btns.map((btn, i) => (
-              <a
-                key={i}
-                className="p-btn"
-                onClick={() => handlerBtnburger(btn.href)}
-              >
-                {btn.textBtn}
-              </a>
-            ))}
-            <button className="p-btn" onClick={closeMenuBurger}>
-              Cerrar
-            </button>
-          </div>
-        </div>
-      )}
+    <header>
       {/* NavBar */}
-      <div className={`menu`}>
-        <div className="flex-container-row btns-navbar">
-          {btns.map((btn, i) => (
-            <BtnNavBar
-              textBtn={btn.textBtn}
-              href={btn.href}
-              img={btn.img}
-              alt={btn.alt}
-              key={i}
-            />
-          ))}
-          <div className="btn-nav-bar flex-container-row">
-            <img
-              src="/public/icons/navbar/icon-language.svg"
-              alt="icono de mundo"
-            />
-            <button className="language ">ES</button>
+      {isForhero ? (
+        <>
+          <div className="menu-navbar-container">
+            <div className={`menu`}>
+              <div className="flex-container-row btns-navbar">
+                {btns.map((btn, i) => (
+                  <BtnNavBar
+                    textBtn={btn.textBtn}
+                    href={btn.href}
+                    img={btn.img}
+                    alt={btn.alt}
+                    key={i}
+                  />
+                ))}
+                <div className="btn-nav-bar flex-container-row">
+                  <img
+                    src="/public/icons/navbar/icon-language.svg"
+                    alt="icono de mundo"
+                  />
+                  <button className="language ">ES</button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      ) : (
+        <>
+          {/* Menu burger */}
+          <div>
+            <div
+              className={`menu-burger ${
+                showBurger && menuOpen === false ? "visible" : ""
+              }`}
+            >
+              <button
+                onClick={toggleMenu}
+                aria-expanded={menuOpen}
+                aria-controls="menu"
+              >
+                <img src="/public/icons/navbar/icon-menu.svg" alt="menu" />
+              </button>
+            </div>
+            {menuOpen && (
+              <div className="menu-burger-container">
+                <div className="menu-burger-content">
+                  {btns.map((btn, i) => (
+                    <a
+                      key={i}
+                      className="p-btn"
+                      onClick={() => handlerBtnburger(btn.href)}
+                    >
+                      {btn.textBtn}
+                    </a>
+                  ))}
+                  <button className="p-btn" onClick={closeMenuBurger}>
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </>
+      )}
     </header>
   );
+};
+
+NavBar.propTypes = {
+  isForhero: PropTypes.bool.isRequired,
 };
 
 export default NavBar;

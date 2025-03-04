@@ -3,12 +3,17 @@
   --blackT          : rgba(4, 34, 34, 0.5);
   --white           : rgb(241, 247, 247);
   --whiteT          : rgba(241, 247, 247, 0.5);
+  --whiteT2         : rgba(241, 247, 247, .3);
   --dark-green      : #03624c;
   --dark-greenT     : rgba(3, 98, 76, 0.5);
+  --dark-greenT2    : rgba(3, 98, 76, 0.3);
   --pastel-green    : #2cc295;
   --pastel-greenT   : rgba(44, 194, 149, 0.5);
+  --pastel-greenT2  : rgba(44, 194, 149, 0.3);
   --strong-green    : #00df82;
   --strong-greenT   : rgba(0, 223, 130, 0.5);
+  --strong-greenT2  : rgba(0, 223, 130, 0.3);
+  --strong-greenT3  : rgba(0, 223, 130, 0.1);
   --cyberpunk-yellow: #DAFF3E;
 
   --main-font: 'Roboto Mono', monospace;
@@ -27,7 +32,7 @@ html {
   font-family     : var(--main-font);
   background-color: var(--white);
   max-width       : 1400px;
-  width: 100%;
+  width           : 100%;
   padding         : 0;
   margin          : 0;
   overflow-x      : hidden;
@@ -44,24 +49,59 @@ body {
 }
 
 h1 {
-  font-size: 6.25rem;
+  font-size: clamp(1rem, 1.625vw + 1.625rem, 5.25rem);
+  padding  : 0;
+  margin   : 0;
 }
 
 h2 {
-  font-size: 5.625rem;
+  font-size: clamp(1rem, 2vw + 2rem, 4.625rem);
+  padding  : 0;
+  margin   : 0;
+  
+  font-weight: lighter;
+  text-align : center;
+  transition : 2s;
+  margin     : 0;
+  padding    : 0;
+}
 
+h2:hover {
+  transform: scale(1.1);
+}
+
+h2::before {
+  content         : "";
+  position        : absolute;
+  bottom          : 0;
+  left            : 50%;
+  width           : 0;
+  height          : 3px;
+  background-color: var(--cyberpunk-yellow);
+  transition      : width 0.5s ease, left 0.5s ease;
+}
+
+h2:hover::before {
+  width: 100%;
+  left : 0;
 }
 
 h3 {
-  font-size: 3.125rem;
+  font-size: clamp(1rem, 1vw + 1rem, 2.125rem);
+
+  padding: 0;
+  margin : 0;
 
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: clamp(.5rem, 0.125vw + 0125rem, 1.125rem);
+  padding  : 0;
+  margin   : 0;
 
 }
 
+/* 
 header {
   width: 100vw;  
   height: auto; 
@@ -71,10 +111,11 @@ header {
   z-index: 1000;
   padding: .5rem;
   margin: 1rem;
-}
+} */
 
 .p-btn {
-  font-size      : 1rem;
+  font-size: clamp(.5rem, .5vw + .5rem, 1rem);
+
   text-decoration: none;
 }
 
@@ -86,6 +127,7 @@ header {
   align-items    : center;
   flex-direction : column;
   margin         : 0;
+  position       : relative;
 }
 
 
@@ -95,4 +137,5 @@ header {
   justify-self   : center;
   align-items    : center;
   flex-direction : row;
+  position       : relative;
 }

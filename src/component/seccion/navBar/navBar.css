@@ -1,10 +1,30 @@
 header {
-  background-color: var(--strong-greenT);
+  width : 100vw;
+  height: auto;
+}
+
+.menu-navbar-container {
+  width          : 100vw;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  margin         : auto;
+
+}
+
+.menu {
+  background-color: var(--strong-greenT3);
   overflow        : hidden;
   position        : relative;
   padding         : 1.3rem;
+  width           : 100vw;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
 
 }
+
+
 
 /*btn individual y grupal navbar*/
 .btn-nav-bar {
@@ -16,6 +36,10 @@ header {
   width      : auto;
   min-width  : fit-content;
   white-space: nowrap;
+
+  /*para que el "pseudo elemento ::before se posiciones correctamente*/
+  position: relative;
+  cursor: pointer;
 }
 
 .btns-navbar {
@@ -25,13 +49,13 @@ header {
   justify-items  : center;
   gap            : 3vw;
   position       : absolute;
-  font-size      : 1rem;
+  font-size      : clamp(.5, .5vw + .5rem, 1rem);
 }
 
 .btns-navbar button {
   border          : none;
   background-color: transparent;
-  font-size       : 1rem;
+  font-size       : clamp(.5, .5vw + .5rem, 1rem);
 }
 
 .btn-nav-bar img {
@@ -39,10 +63,25 @@ header {
   height: 30px;
 }
 
-.btn-nav-bar:hover {
-  border-bottom: 5px solid var(--strong-green);
 
+
+.btn-nav-bar::before {
+  content         : "";
+  position        : absolute;
+  bottom          : 0;
+  left            : 50%;
+  width           : 0;
+  height          : 3px;
+  background-color: var(--cyberpunk-yellow);
+  transition      : width 0.8s ease, left 0.8s ease;
 }
+
+.btn-nav-bar:hover::before {
+  width: 100%;
+  left : 0;
+}
+
+
 
 
 /*--- burger menu ---*/
@@ -52,10 +91,13 @@ header {
   width          : 100%;
   display        : flex;
   flex-direction : row;
-  justify-content: right;
+  justify-content: flex-end;
   justify-self   : center;
   align-items    : center;
   display        : none;
+  z-index : 100;
+
+
 
 }
 
@@ -66,6 +108,10 @@ header {
 .menu-burger button {
   border          : none;
   background-color: transparent;
+  margin-top      : 3vh;
+  margin-right    : 2vw;
+
+  cursor: pointer;
 }
 
 .menu-burger img {
@@ -74,40 +120,49 @@ header {
 }
 
 .menu-burger-container {
-  position        : fixed;
-  left            : 81vw;
+  position: fixed;
+  left    : 70vw;
+  top     : -9vw;
+  z-index : 100;
+
+
   /*Donde se coloca el  menu cuando se abre*/
-  top             : -5vw;
   background-color: var(--strong-greenT);
   border-radius   : 50vw;
-  padding         : 6vw;
-  height          : 21vw;
-  width           : 22vw;
-  max-width       : 301px;
-  max-height      : 297px;
+
+  width       : clamp(15rem, 15vw + 15rem, 31.25rem);
+  aspect-ratio: 1/1;
+  max-width   : 500px;
+  max-height  : 500px;
 
   display        : flex;
-  align-items    : flex-start;
-  justify-content: flex-start;
+  align-items    : center;
+  justify-content: center;
   overflow       : hidden;
+
 
 }
 
 .menu-burger-content {
-  display        : flex;
-  flex-direction : column;
-  align-items    : flex-start;
-  justify-content: flex-start;
-
-  width      : auto;
-  white-space: nowrap;
-
+  display         : flex;
+  flex-direction  : column;
+  align-items     : flex-start;
+  justify-content : flex-start;
+  gap             : 10px;
+  width           : auto;
+  white-space     : nowrap;
+  padding-top     : 3rem;
+  /* 
+  position        : fixed;
+  left            : clamp(90vw, 6vw + 6rem, 85vw); 
+  top             : clamp(10vh, 6.5vh + 6rem, 6vh);  */
 }
 
 .p-btn {
-  color    : var(--black);
-  font-size: 1.5vw;
+  color     : var(--black);
+  font-size : clamp(.5rem, .25vw + .9rem, 1.8rem);
   transition: transform 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .menu-burger-content button {
@@ -116,9 +171,10 @@ header {
 }
 
 .p-btn:hover {
-  color      : var(--pastel-green);
-  transform: scale(1.2);
+  color      : var(--cyberpunk-yellow);
+  transform  : scale(1.2);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
 }
 
 @media (max-width: 910px) {
@@ -130,10 +186,13 @@ header {
     display: none;
   }
 
-  .menu-burger-container {
-    max-width : 198px;
-    max-height: 189px;
-    display   : flex;
-  }
+}
 
+@media(max-width:800px) {
+
+  .menu-burger-container {
+    align-items    : left;
+    justify-content: left;
+    padding-left   : 3rem;
+  }
 }

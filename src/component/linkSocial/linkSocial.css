@@ -2,10 +2,24 @@
     gap: 4vw;
 }
 
-.icons img:hover {
-    transform : translateY(-10px);
+.icons img{
+    width: clamp(3rem, 2vw + 2rem, 5.25rem);
+    height: clamp(3rem, 2vw + 2rem, 5.25rem);
+}
+.email img{
+    width: clamp(3rem, 2vw + 2rem, 4rem);
+    height: clamp(3rem, 2vw + 2rem, 4rem);
 }
 
-.icons img:hover {
+.icons img:hover,.email img:hover {
+    transform : translateY(-10px);
     transform: scale(1.1);
+
+}
+
+
+
+.big img{
+    width: clamp(4rem, 4vw + 4rem, 9rem);
+    height: clamp(4rem, 4vw + 4rem, 9rem);
 }

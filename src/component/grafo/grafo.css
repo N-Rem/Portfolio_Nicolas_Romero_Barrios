@@ -1,3 +1,16 @@
-.canvas-grafo{
-    color: 000;
+.grafo-style {
+  /*background: #244769;*/
+  background: rgb(141, 220, 197);
+  background: linear-gradient(180deg, rgba(141, 220, 197, 1) 0%, rgba(168, 227, 211, 1) 38%, rgba(197, 235, 225, 1) 54%, rgba(216, 240, 235, 1) 68%, rgba(241, 247, 247, 1) 86%);
+
+  width          : auto;
+  height         : auto;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  margin: 0;
+  padding: 0;
+
 }
+
+
