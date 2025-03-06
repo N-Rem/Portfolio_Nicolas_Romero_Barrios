@@ -1,0 +1,221 @@
+.first-container {
+    width  : clamp(16rem, 16vw + 16rem, 32rem);
+    height : clamp(14rem, 14.5vw + 10rem, 26rem);
+    padding: 0;
+    margin : 0;
+
+}
+
+.card-container {
+    /*variable que cambai con js para crear el vorde interactivo*/
+    --rotation      : 100deg;
+    background-color: var(--black);
+    margin          : 0;
+    padding         : 0;
+    width           : clamp(15rem, 15vw + 15rem, 31rem);
+    height          : clamp(10rem, 10vw + 12rem, 26rem);
+
+    border           : 3px solid transparent;
+    border-radius    : 1em;
+    background-origin: border-box;
+    background-clip  : padding-box, border-box;
+    position         : relative;
+    overflow         : hidden;
+    padding          : 4%;
+    cursor           : pointer;
+    display          : flex;
+    justify-content  : center;
+    align-items      : center;
+    will-change      : background;
+    /* mejora el rendimiento porque remarca el bg ba a cambiar.*/
+
+    /* borde amarillo sae usa la bariable rotacion que cambia gracias al js */
+    background-image: linear-gradient(var(--black), var(--black)),
+        conic-gradient(from var(--rotation),
+            var(--cyberpunk-yellow) 0deg,
+            var(--cyberpunk-yellow) 90deg,
+            var(--black) 90deg,
+            var(--black) 360deg);
+    background-origin: border-box;
+    background-clip  : padding-box, border-box;
+    transition       : background 0.2s ease-in-out;
+}
+
+.content {
+    display         : flexbox;
+    justify-items   : center;
+    align-self      : center;
+    width           : clamp(8rem, 8vw + 8rem, 27rem);
+    height          : auto;
+    background-color: var(--negro);
+    color           : var(--white);
+    padding         : 1.5%;
+    margin          : 0;
+
+    border-radius: 1em;
+}
+
+.title1,
+.title2,
+.title3 {
+    color: var(--pastel-green);
+}
+
+h1.title1 {
+    font-size: clamp(.7rem, 1vw + 1rem, 3rem);
+    padding  : 0;
+    margin   : 0;
+}
+
+h2.title2 {
+    font-size: clamp(.5rem, .8vw + .8rem, 3rem);
+    padding  : 0;
+    margin   : 0;
+
+    /* Sobreescribe index.css */
+    font-weight: initial;
+    text-align : initial;
+    transition : none;
+    transform  : none;
+    position   : static;
+}
+
+/* Elimina subrayado */
+h2.title2::before,
+h2.title2:hover::before {
+    content: none;
+}
+
+
+.title3 {
+    font-size: clamp(.5rem, .6vw + .6rem, 2rem);
+
+}
+
+.description {
+    font-size: clamp(.5rem, .6vw + .6rem, 1rem);
+
+    color: var(--white);
+}
+
+.title1 {
+    font-size     : 2vw;
+    font-weight   : bold;
+    letter-spacing: -.01em;
+    line-height   : normal;
+    margin-bottom : 5px;
+    width         : 20rem;
+    transition    : color 0.3s ease;
+    text-align    : center;
+    position      : relative;
+    overflow      : hidden;
+    z-index       : 1;
+
+}
+
+.effect {
+    /*define una forma geométrica (como un círculo)y aplica esa forma a un elemento para mostrar solo la parte del elemento que se encuentra dentro de esa forma.*/
+    clip-path       : polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    transform-origin: center;
+    transition      : all cubic-bezier(.1, .5, .5, 1) 0.5s;
+
+    position        : absolute;
+    left            : -4px;
+    right           : -4px;
+    top             : -4px;
+    bottom          : -4px;
+    background-color: var(--cyberpunk-yellow);
+    z-index         : -1;
+}
+
+.card-container:hover .effect {
+    clip-path       : polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: var(--cyberpunk-yellow);
+
+
+
+}
+
+.card-container:hover .title1 {
+    color: var(--black);
+
+}
+
+
+/*------- Slider de las cardExp --------*/
+@keyframes left {
+    0% {
+        transform: rotate(0deg);
+        /* Inicio: sin rotación */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* Fin   : rotación completa */
+    }
+}
+
+.exp-slider {
+    padding        : 10px;
+    display        : flex;
+    flex-wrap      : nowrap;
+    justify-content: flex-start;
+    gap            : 35px;
+    row-gap        : 35px;
+
+}
+
+.left-arrow {
+    position : absolute;
+    left     : calc(50% - max(20vw, 80px));
+    transform: translateX(-100%);
+    
+
+}
+.left-arrow:active {
+    transform : translateX(-110%);
+    transition: transform 0.2s ease-in-out;
+}
+.left-arrow img:hover {
+    transform : scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.right-arrow {
+    position : absolute;
+    left     : calc(50% + max(20vw, 80px));
+    transform: translateX(0);
+    
+}
+.right-arrow:active {
+    transform : translateX(10%);
+    transition: transform 0.2s ease-in-out;
+}
+.right-arrow img:hover {
+    transform : scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.right-arrow button,
+.left-arrow button {
+    background: none;
+    border    : none;
+    cursor: pointer;
+}
+
+.right-arrow img,
+.left-arrow img {
+    width: clamp(2rem, 2vw + 2rem, 4.188rem);
+    cursor: pointer;
+}
+
+@media(max-width: 930px) {
+    .left-arrow {
+        left: calc(50% - max(20vw, 36vw));
+    }
+
+    .right-arrow {
+        left: calc(50% + max(20vw, 36vw));
+    }
+}
