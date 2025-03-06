@@ -31,33 +31,6 @@
 
 
 
-#about {
-    font-weight: lighter;
-    text-align : center;
-    transition : 2s;
-    margin     : 0;
-    padding    : 0;
-}
-
-#about:hover {
-    transform: scale(1.1);
-}
-
-#about::before {
-    content         : "";
-    position        : absolute;
-    bottom          : 0;
-    left            : 50%;
-    width           : 0;
-    height          : 3px;
-    background-color: var(--cyberpunk-yellow);
-    transition      : width 0.5s ease, left 0.5s ease;
-}
-
-#about:hover::before {
-    width: 100%;
-    left : 0;
-}
 
 .about-container {
     position  : relative;
@@ -121,6 +94,10 @@
 .buttonCv-container{
     margin-top: 2rem;
     gap:2rem;
+}
+.buttonCv-container p{
+    font-size : clamp(.5rem, .6vw + .6rem, 1rem);
+    text-align: center;
 }
 
 
