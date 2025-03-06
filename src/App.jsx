@@ -5,6 +5,7 @@ import NotFound from "./component/pages/error404/NotFound";
 import Hero from "./component/hero/Hero";
 import About from "./component/pages/aboutMe/about";
 import Experience from "./component/pages/experience/Experience";
+import Technologies from "./component/pages/technologies/technologies";
 
 function App() {
   const router = createBrowserRouter([
@@ -15,6 +16,7 @@ function App() {
           <Hero/>
           <About/>
           <Experience/>
+          <Technologies/>
         </MainLayout>
       ),
     },
