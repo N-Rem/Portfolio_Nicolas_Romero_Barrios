@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="grafo-container">
         <Grafo />
       </div>
-      <div>
+      <div id="home">
         <h1>Nicolas Romero Barrios</h1>
         <h2>Developer FullStack</h2>
       </div>

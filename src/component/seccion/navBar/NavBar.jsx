@@ -4,10 +4,13 @@ import "./navBar.css";
 import BtnNavBar from "/src/component/seccion/navBar/BtnNavBar.jsx";
 import PropTypes from "prop-types";
 
+
 const NavBar = ({ isForhero }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showBurger, setShowBurger] = useState(false);
   const navigate = useNavigate();
+
+
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -46,10 +49,15 @@ const NavBar = ({ isForhero }) => {
     setMenuOpen(false);
     setShowBurger(true);
   };
-  const handlerBtnburger = (url) => {
-    navigate(url);
-    closeMenuBurger();
-  };
+
+  const handlerBtnburger = (href) => {
+  // Usamos el hash para encontrar el elemento y hacer scroll
+  const target = document.querySelector(href);
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
+  closeMenuBurger();
+};
 
   // const handleLanguageToggle = () => {
   //   const newLang = i18n.language === "ES" ? "EN" : "ES";
@@ -57,10 +65,10 @@ const NavBar = ({ isForhero }) => {
   // };
 
   const btns = [
-    { textBtn: "Inicio", href: "/#home", img: "home", alt: "home" },
-    { textBtn: "Sobre Mi", href: "/#about", img: "about", alt: "about" },
-    { textBtn: "Experiencia", href: "/#exp", img: "exp", alt: "exp" },
-    { textBtn: "Tecnologias", href: "/#tech", img: "tech", alt: "tech" },
+    { textBtn: "Inicio", href: "#home", img: "home", alt: "home" },
+    { textBtn: "Sobre Mi", href: "#about", img: "about", alt: "about" },
+    { textBtn: "Experiencia", href: "#exp", img: "exp", alt: "exp" },
+    { textBtn: "Tecnologias", href: "#tech", img: "tech", alt: "tech" },
     {
       textBtn: "Portfolio",
       href: "/#portfolio",

@@ -8,7 +8,7 @@ const Experience = () => {
 
   return (
     <div className="exp-container flex-container-column">
-      <h2 id="Exp">Experiencia</h2>
+      <h2 id="exp">Experiencia</h2>
       <CardsExpSlider />
     </div>
   );
