@@ -2,6 +2,11 @@
     gap: 4vw;
 }
 
+.icons{
+    gap:4vw;
+}
+
+
 .icons img{
     width: clamp(3rem, 2vw + 2rem, 5.25rem);
     height: clamp(3rem, 2vw + 2rem, 5.25rem);

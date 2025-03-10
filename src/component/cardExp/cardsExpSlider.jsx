@@ -67,10 +67,14 @@ const CardsExpSlider = () => {
         />
       </div>
       <div className="right-arrow">
-        <button onClick={rightHandler}><img src="/public/imgs/right-arrow.svg"/></button>
+        <button onClick={rightHandler}>
+          <img src="/public/imgs/right-arrow.svg" />
+        </button>
       </div>
       <div className="left-arrow ">
-        <button onClick={leftHandler }><img src="/public/imgs/left-arrow.svg"/></button>
+        <button onClick={leftHandler}>
+          <img src="/public/imgs/left-arrow.svg" />
+        </button>
       </div>
     </div>
   );

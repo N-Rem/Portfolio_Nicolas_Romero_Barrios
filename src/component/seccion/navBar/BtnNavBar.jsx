@@ -4,17 +4,23 @@ import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const BtnNavBar = ({ textBtn, href, img, alt }) => {
-
   const src = `/public/icons/navbar/icon-${img}.svg`;
-
   const navigate = useNavigate();
 
+  const buttonHandler = (href) => {
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="btn-nav-bar flex-container-row" onClick={()=>navigate(href)}>
+    <div
+      className="btn-nav-bar flex-container-row"
+      onClick={() => buttonHandler(href)}
+    >
       <img src={src} alt={alt} />
-      <a>
-        {textBtn}
-      </a>
+      <a>{textBtn}</a>
     </div>
   );
 };

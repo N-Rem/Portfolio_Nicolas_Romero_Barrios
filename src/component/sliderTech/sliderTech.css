@@ -1,0 +1,74 @@
+/*Varuables del slider*/
+:root {
+    --width : 108px;
+    --height: 90px;
+
+    /*Cantidad de items-tech*/
+    --quantity: 13;
+
+
+}
+
+@keyframes auto-run {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+.slider-tech {
+    width    : 80%;
+    /* border: 1px solid red; */
+    height   : var(--height);
+    overflow : hidden;
+    
+    mask-image: linear-gradient(to right,
+            transparent, #000 10% 90%, transparent);
+}
+
+.slider-tech .slider-itms-container {
+    display  : flex;
+    /* gap   : 1.5rem; no hace falta porque el delay le da el espacio que neceitan.*/
+    width    : 100%;
+
+    /*el ancho se multiplica por la cantidad de items */
+    min-width: calc(var(--width)* var(--quantity));
+    position : relative;
+
+
+}
+
+.slider-tech .slider-itms-container .tech-icon {
+    width : var(--width);
+    height: var(--height);
+
+    /*se apilan todos en una esquina*/
+    position: absolute;
+    /*lo deja todo al costado para que no se vea.*/
+    left    : 100%;
+
+    animation: auto-run 15s linear infinite;
+
+    /*10s es la duración total de la animación, esto se divide por la acantidad de items para ontener el tiempo que debe pasar para poder animarse..*/
+    /*lugo se multiplica por su posicion para que cada icono se anime con un retraso*/
+    animation-delay: calc(15s / var(--quantity)* var(--position))!important;
+
+}
+
+.slider-tech:hover .tech-icon {
+    animation-play-state: paused;
+}
+
+.slider-tech .slider-itms-container .tech-icon img {
+    width : 2.5rem;
+    height: auto;
+}
+
+.slider-itms-container p {
+    text-align : center;
+    white-space: nowrap;
+    width      : auto;
+}

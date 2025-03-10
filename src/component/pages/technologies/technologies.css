@@ -1,0 +1,30 @@
+.tech-container{
+    height: auto;
+    margin-top: .5rem;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+
+.content-tech-container{
+    width: clamp(22rem, 32vw + 32rem, 54rem);
+    gap: 1rem;
+    
+    margin: 0;
+    text-align : center;
+    white-space: wrap;
+}
+.content-tech-container h2, .content-techContainer p{
+    padding: 0;
+    margin: 0;
+  height: auto;
+  width: auto;
+}
+
+@media(max-width: 750px){
+    .content-tech-container{
+        width: clamp(10rem, 15vw + 15rem, 40rem);
+    }
+}
