@@ -3,7 +3,7 @@ import GenericPortfolio from "../../genericPortfolio/GenericPortfolio";
 
 
 const Portfolios = () => {
-  const cardPortfolioProyectos = [
+  const cardPortfolioColab = [
     {
       id:1,
       title: "Portfolio Samuel Carranza",
@@ -41,11 +41,13 @@ const Portfolios = () => {
     },
   ];
 
-  const cardPortfolioColab = [{}, {}];
+  const cardPortfolioProyectos = [{}, {}];
 
   return (
-    <div id="portfolio">
+    <div id="portfolio" className="flex-container-column">
+      <h2>Portfiolio</h2>
       <GenericPortfolio subtitle={"Proyectos"} cards={cardPortfolioProyectos} />
+      <GenericPortfolio subtitle={"Colaboraciones"} cards={cardPortfolioColab} />
     </div>
   );
 };
