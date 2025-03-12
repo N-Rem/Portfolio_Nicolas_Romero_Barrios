@@ -12,6 +12,9 @@ const BtnNavBar = ({ textBtn, href, img, alt }) => {
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
     }
+    
+  const url = `/${href}`;
+    navigate(url)
   };
 
   return (

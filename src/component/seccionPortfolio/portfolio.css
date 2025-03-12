@@ -1,0 +1,116 @@
+.portfolio-container {
+    width  : 100vw;
+    margin : 0;
+    padding: 0;
+
+}
+
+.date-proyect-container {
+    width: clamp(27rem, 27vw + 27rem, 54rem);
+
+    display        : flex;
+    flex-direction : row;
+    align-items    : flex-start;
+    justify-content: flex-start;
+}
+.date-proyect-container p{
+    font-size: clamp(.5rem, 0.5vw + .5rem, 1rem);
+
+}
+
+.title-portfolio-container {
+    width     : clamp(27rem, 27vw + 27rem, 54rem);
+    text-align: center;
+    gap       : 1rem;
+}
+
+.title-portfolio-container h2 {
+    font-size: clamp(1.5rem, 1.5vw + 1.5rem, 3.625rem);
+
+}
+
+.photo-portfolio-container {
+    width        : auto;
+    height       : auto;
+    border-radius: 45px;
+    /* background   : var(--black); */
+    margin-top   : 1.5rem;
+    /* border    : 3px solid var(--pastel-green); */
+}
+
+.photo-portfolio-container img {
+    width        : auto;
+    height       : clamp(24.9rem, 14.9vh + 14.9rem, 29.9rem);
+    border-radius: 45px;
+    transition: .5s;
+
+}
+
+.photo-portfolio-container img:hover {
+    scale : 1.1;
+    border: 2px solid var(--pastel-green);
+}
+
+.photo-portfolio-container:hover {
+    margin-bottom: 1rem;
+}
+
+.icons-portfolio-container {
+    width: clamp(32rem, 32vw + 32rem, 62rem);
+    gap  : 3rem;
+
+}
+
+
+
+.icons-portfolio-container img:hover {
+    scale: 1.1;
+}
+
+.icons-portfolio-container .git-hub {
+    width: clamp(1.5rem, 2.5vw + 2.5rem, 3rem);
+
+}
+
+.icons-portfolio-container .page {
+    width: clamp(1.6rem, 2.6vw + 2.7rem, 3.5rem);
+}
+
+
+/*Contetnt 864px*/
+.content-portfolio-container {
+    width     : clamp(27rem, 27vw + 27rem, 54rem);
+    /* width  : 85vw; */
+    text-align: center;
+    gap       : 1rem;
+    margin-top: 1rem;
+
+}
+
+.content-portfolio-container p {
+    font-size: clamp(.5rem, .6vw + .6rem, 1rem);
+
+    word-wrap: break-word;
+}
+
+
+@media(max-width: 750px) {
+    .photo-portfolio-container img {
+        width : 90vw;
+        height: auto;
+    }
+
+    .icons-portfolio-container {
+        width: 80vw;
+    }
+
+    .title-portfolio-container {
+        width: 100vw;
+    }
+
+    .content-portfolio-container {
+        /* width: clamp(27rem, 27vw + 27rem, 54rem); */
+        width: 85vw;
+    }
+
+}

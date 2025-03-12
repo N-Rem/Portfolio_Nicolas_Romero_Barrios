@@ -1,7 +1,8 @@
 import React from "react";
 import "./sliderTech.css";
+import PropTypes from "prop-types";
 
-const SliderTech = () => {
+const SliderTech = ({ forTechnologies, techs }) => {
   const iconTech = [
     { name: "C Sharp", route: "csharp-icon" },
     { name: "CSS", route: "css-icon" },
@@ -17,27 +18,48 @@ const SliderTech = () => {
     { name: "Visual Studio", route: "visualStudio-icon" },
     { name: "VS Code", route: "vsCode-icon" },
   ];
+
   return (
     <div className="slider-tech">
-      <div className="slider-itms-container ">
-        {iconTech
-          .concat(iconTech)
-          .map((icon, i /* Duplicamos el array para crear el loop */) => (
-            <div
-              className="flex-container-column tech-icon"
-              style={{ "--position": i }}
-              key={i}
-            >
-              <img
-                src={`public/icons/tech/${icon.route}.svg`}
-                alt={icon.name}
-              />
-              <p>{icon.name}</p>
-            </div>
-          ))}
+      <div
+        className="slider-itms-container "
+        style={{ "--quantity": forTechnologies?(iconTech.length) : (techs.length)}}
+      >
+        {forTechnologies
+          ? iconTech.map((icon, i) => (
+              <div
+                className="flex-container-column tech-icon"
+                style={{ "--position": i }}
+                key={i}
+              >
+                <img
+                  src={`../public/icons/tech/${icon.route}.svg`}
+                  alt={icon.name}
+                />
+                <p>{icon.name}</p>
+              </div>
+            ))
+          : techs.map((icon, i) => (
+              <div
+                className="flex-container-column tech-icon"
+                style={{ "--position": i }}
+                key={i}
+              >
+                <img
+                  src={`../public/icons/tech/${icon.route}.svg`}
+                  alt={icon.name}
+                />
+                <p>{icon.name}</p>
+              </div>
+            ))}
       </div>
     </div>
   );
+};
+
+SliderTech.propTypes = {
+  forTechnologies: PropTypes.bool.isRequired,
+  techs: PropTypes.array,
 };
 
 export default SliderTech;

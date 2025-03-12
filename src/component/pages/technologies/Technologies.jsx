@@ -14,7 +14,7 @@ const Technologies = () => {
       <p>En el Backend, manejo C# con ASP.NET Core, Entity Framework y MySQL, permitiéndome desarrollar API REST y gestionar bases de datos de manera eficiente.</p>
 
       </div>
-      <SliderTech/>
+      <SliderTech forTechnologies={true}/>
     </div>
   )
 }
