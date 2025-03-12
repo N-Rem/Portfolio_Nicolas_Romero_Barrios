@@ -1,0 +1,94 @@
+.portfolio-container {
+    padding-top: 2rem;
+}
+
+.cards-portfolios-container {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: center;
+    align-items    : center;
+    gap            : 1.3rem;
+    margin-top: 20px;
+
+}
+
+
+.card-portfolio-container {
+    background   : var(--black);
+    /* width     : 21rem;
+    height       : 12.5rem; */
+    width        : clamp(12rem, 12vw + 12rem, 21rem);
+    height       : clamp(9rem, 9vw + 9rem, 14rem);
+    border-radius: 1em;
+    padding-top  : 10px;
+
+}
+
+.titleProyect {
+    /* color: var(--white); */
+    color         : var(--pastel-green);
+    font-size     : clamp(1rem, 1.2vw + .4rem, 2rem);
+    font-weight   : bold;
+    letter-spacing: -.01em;
+    line-height   : normal;
+    margin-bottom : 5px;
+    width         : clamp(12rem, 12vw + 12rem, 21rem);
+
+    transition: color 0.3s ease;
+    text-align: center;
+    position  : relative;
+    overflow  : hidden;
+    z-index   : 1;
+}
+
+
+.effect {
+    /*define una forma geométrica (como un círculo)y aplica esa forma a un elemento para mostrar solo la parte del elemento que se encuentra dentro de esa forma.*/
+    clip-path       : polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    transform-origin: center;
+    transition      : all cubic-bezier(.1, .5, .5, 1) 0.5s;
+
+    position        : absolute;
+    left            : -4px;
+    right           : -4px;
+    top             : -4px;
+    bottom          : -4px;
+    background-color: var(--cyberpunk-yellow);
+    z-index         : -1;
+}
+
+.card-portfolio-container:hover .effect {
+    clip-path       : polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: var(--cyberpunk-yellow);
+
+}
+
+.card-portfolio-container:hover .titleProyect {
+    color: var(--black);
+}
+
+
+.card-portfolio-container .card img {
+    /* width : 18rem;
+    height: 9.4rem; */
+    width : clamp(10rem, 11vw + 11rem, 19rem);
+    height: clamp(5rem, 5vw + 5rem, 10rem);
+
+    border-radius: 1em;
+    border       : 3px solid var(--cyberpunk-yellow)
+}
+
+.card-portfolio-container:hover {
+    scale: 1.1;
+}
+
+.card-portfolio-container:hover .card img {
+
+    border: 3px solid var(--pastel-green)
+}
+
+.card {
+    gap: clamp(1.5rem, .7vw + .7rem, 1rem);
+    width: clamp(12rem, 12vw + 12rem, 21rem);
+
+}

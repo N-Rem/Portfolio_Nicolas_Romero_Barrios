@@ -56,6 +56,9 @@ const NavBar = ({ isForhero }) => {
   if (target) {
     target.scrollIntoView({ behavior: "smooth" });
   }
+  const url = `/${href}`;
+  navigate(url);
+
   closeMenuBurger();
 };
 
@@ -71,13 +74,13 @@ const NavBar = ({ isForhero }) => {
     { textBtn: "Tecnologias", href: "#tech", img: "tech", alt: "tech" },
     {
       textBtn: "Portfolio",
-      href: "/#portfolio",
+      href: "#portfolio",
       img: "portfolio",
       alt: "portfolio",
     },
     {
       textBtn: "Contacto",
-      href: "/#contact",
+      href: "#contact",
       img: "contacto",
       alt: "Contacto",
     },
