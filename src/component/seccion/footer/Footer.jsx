@@ -6,28 +6,34 @@ import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const btns = [
-    { textBtn: "Inicio", href: "/#home" },
-    { textBtn: "Tecnologias", href: "/#tech" },
+    { textBtn: "Inicio", href: "#home" },
+    { textBtn: "Tecnologias", href: "#tech" },
     {
       textBtn: "Portfolio",
-      href: "/#portfolio",
+      href: "#portfolio",
     },
     {
       textBtn: "Contacto",
-      href: "/#contact",
+      href: "#contact",
     },
   ];
 
   const navegate = useNavigate();
 
-  const handlerBtnNav = (url) => {
+  const handlerBtnNav = (href) => {
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+    const url = `/${href}`;
     navegate(url);
   };
+
   return (
     <footer>
       <div className="footer-container flex-container-row">
-        <div className="content-name">
-          <a className="p-btn" onClick={() => handlerBtnNav("/#home")}>
+        <div className="content-name ">
+          <a className="p-btn" onClick={() => handlerBtnNav("#home")}>
             <h1>Nicolas Romero barrios</h1>
           </a>
           <h2>Developer FullStack</h2>
@@ -37,7 +43,7 @@ const Footer = () => {
         <div className="content-social-copy">
           <LinkSocial />
           <div className="copyright">
-            <p>@2025 Desarrollado por Nicolas Alejandro Romero Barrios.</p>
+            <p>@2025 Desarrollado por Nicolas Romero Barrios.</p>
           </div>
         </div>
 

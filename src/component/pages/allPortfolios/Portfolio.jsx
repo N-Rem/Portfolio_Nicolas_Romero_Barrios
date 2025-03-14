@@ -11,9 +11,10 @@ const Portfolio = () => {
     window.scrollTo(0, 0);
   }, [id]);
 
-  const cardPortfolioProyectos = [
+  const cardPortfolio = [
     {
       id: "1",
+      Portfolio: "Proyect",
       title: "Portfolio Samuel Carranza 1",
       img: "portfolioSC",
       urlProyect: "/proyect",
@@ -35,6 +36,39 @@ const Portfolio = () => {
     },
     {
       id: "2",
+      Portfolio: "Colab",
+      title: "Portfolio Proyecto 2",
+      img: "portfolioSC2",
+      urlProyect: "/proyect",
+      subtitle: "Descripción del segundo proyecto...",
+      description: "Lorem ipsum dolor sit amet...",
+      responsibilities: "Lorem ipsum dolor sit amet...",
+      tech: [
+        { name: "CSS", route: "css-icon" },
+        { name: "GitHub", route: "github-icon" },
+      ],
+      linkPage: '',
+      linkGit: ''
+    },
+    {
+      id: "3",
+      Portfolio: "Colab",
+      title: "Portfolio Proyecto 2",
+      img: "portfolioSC2",
+      urlProyect: "/proyect",
+      subtitle: "Descripción del segundo proyecto...",
+      description: "Lorem ipsum dolor sit amet...",
+      responsibilities: "Lorem ipsum dolor sit amet...",
+      tech: [
+        { name: "CSS", route: "css-icon" },
+        { name: "GitHub", route: "github-icon" },
+      ],
+      linkPage: '',
+      linkGit: ''
+    },
+    {
+      id: "4",
+      Portfolio: "Colab",
       title: "Portfolio Proyecto 2",
       img: "portfolioSC2",
       urlProyect: "/proyect",
@@ -51,8 +85,8 @@ const Portfolio = () => {
   ];
 
   const idString = id.slice(1);
-  const selectedProject = cardPortfolioProyectos.find(
-    (project) => project.id === idString // Comparación correcta de los strings
+  const selectedProject = cardPortfolio.find(
+    (project) => project.id === idString 
   );
 
   return (
