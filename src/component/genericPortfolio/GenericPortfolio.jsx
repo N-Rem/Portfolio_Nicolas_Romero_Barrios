@@ -6,7 +6,6 @@ import "./genericPortfolio.css";
 const GenericPortfolio = ({ subtitle, cards }) => {
   return (
     <div className="flex-container-column portfolio-container">
-      <h2>Portfiolio</h2>
       <h3 >{subtitle}</h3>
       <div className="cards-portfolios-container">
         {cards.map((card, i) => (

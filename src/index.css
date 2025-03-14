@@ -37,6 +37,24 @@ html {
   margin          : 0;
   overflow-x      : hidden;
 }
+html::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px; 
+}
+
+html::-webkit-scrollbar-track {
+  background: rgb(185, 202, 202);
+}
+
+/* Color de la barra de desplazamiento */
+html::-webkit-scrollbar-thumb {
+  background: var(--dark-green); 
+  border-radius: 4px; 
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--pastel-green);
+}
 
 
 body {

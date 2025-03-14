@@ -8,6 +8,7 @@ import Experience from "./component/pages/experience/Experience";
 import Technologies from "./component/pages/technologies/technologies";
 import Portfolios from "./component/pages/allPortfolios/Portfolios";
 import Portfolio from "./component/pages/allPortfolios/Portfolio";
+import Contact from "./component/pages/contact/Contact";
 
 function App() {
   const router = createBrowserRouter([
@@ -20,6 +21,7 @@ function App() {
           <Experience/>
           <Technologies/>
           <Portfolios/>
+          <Contact/>
         </MainLayout>
       ),
     },{

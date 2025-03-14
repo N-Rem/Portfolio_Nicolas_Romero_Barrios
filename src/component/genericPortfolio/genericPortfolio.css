@@ -1,5 +1,6 @@
 .portfolio-container {
     padding-top: 2rem;
+    margin-bottom: 5rem;
 }
 
 .cards-portfolios-container {
@@ -9,6 +10,7 @@
     align-items    : center;
     gap            : 1.3rem;
     margin-top: 20px;
+    margin-bottom: 20px;
 
 }
 

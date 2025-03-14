@@ -99,6 +99,9 @@
     font-size : clamp(.5rem, .6vw + .6rem, 1rem);
     text-align: center;
 }
+.buttonCv-container a{
+    text-decoration: none;
+}
 
 
 
