@@ -109,7 +109,7 @@
 
     "footer": {
       "slogan": "Aprendiendo constantemente para brindar soluciones",
-      "copyrigt": "@2025 Desarrollado por Nicolas Romero Barrios.",
+      "copyright": "@2025 Desarrollado por Nicolas Romero Barrios.",
       "btn": [
         { "textBtn": "Inicio", "href": "#home" },
         { "textBtn": "Tecnologias", "href": "#tech" },

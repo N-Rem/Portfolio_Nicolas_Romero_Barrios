@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { TranslationContext } from "../../../context/TranslationContext";
 
 const Footer = () => {
-  const { sectionFooterSlogan, sectionFooterCopyrigt, sectionFooterBtn } =
+  const { sectionFooterSlogan, sectionFooterCopyright , sectionFooterBtn } =
     useContext(TranslationContext);
 
 
@@ -36,7 +36,7 @@ const Footer = () => {
         <div className="content-social-copy">
           <LinkSocial />
           <div className="copyright">
-            <p>{sectionFooterCopyrigt}</p>
+            <p>{sectionFooterCopyright}</p>
           </div>
         </div>
 
