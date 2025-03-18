@@ -14,7 +14,7 @@ const DescriptionPortfolio = ({ description, responsibilities, techs }) => {
         <h3>Responsibilities</h3>
         <p>{responsibilities}</p>
         <h3>Tecnologia Utilizadas</h3>
-        <SliderTech forTechnologies={false} techs={techs} />
+        <SliderTech techs={techs} />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import "./sliderTech.css";
 import PropTypes from "prop-types";
 
-const SliderTech = ({ forTechnologies, techs }) => {
+const SliderTech = ({ techs }) => {
   const iconTech = [
     { name: "C Sharp", route: "csharp-icon" },
     { name: "CSS", route: "css-icon" },
@@ -23,9 +23,11 @@ const SliderTech = ({ forTechnologies, techs }) => {
     <div className="slider-tech">
       <div
         className="slider-itms-container "
-        style={{ "--quantity": forTechnologies?(iconTech.length) : (techs.length)}}
+        style={{
+          "--quantity": !techs ? iconTech.length : techs.length,
+        }}
       >
-        {forTechnologies
+        {!techs
           ? iconTech.map((icon, i) => (
               <div
                 className="flex-container-column tech-icon"
@@ -58,7 +60,6 @@ const SliderTech = ({ forTechnologies, techs }) => {
 };
 
 SliderTech.propTypes = {
-  forTechnologies: PropTypes.bool.isRequired,
   techs: PropTypes.array,
 };
 

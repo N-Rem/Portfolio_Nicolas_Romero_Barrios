@@ -31,7 +31,7 @@ CardPortfolio.propTypes = {
   title: PropTypes.string,
   img: PropTypes.string,
   url: PropTypes.string,
-  id: PropTypes.number.isRequired
+  id: PropTypes.string.isRequired
 };
 
 export default CardPortfolio;

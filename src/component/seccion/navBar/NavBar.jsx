@@ -1,16 +1,16 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./navBar.css";
 import BtnNavBar from "/src/component/seccion/navBar/BtnNavBar.jsx";
 import PropTypes from "prop-types";
-
+import { TranslationContext } from "../../../context/TranslationContext";
 
 const NavBar = ({ isForhero }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showBurger, setShowBurger] = useState(false);
   const navigate = useNavigate();
-
-
+  const { btns, textLanguage, onToggleLanguage, close } =
+    useContext(TranslationContext);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -51,40 +51,35 @@ const NavBar = ({ isForhero }) => {
   };
 
   const handlerBtnburger = (href) => {
-  // Usamos el hash para encontrar el elemento y hacer scroll
-  const target = document.querySelector(href);
-  if (target) {
-    target.scrollIntoView({ behavior: "smooth" });
-  }
-  const url = `/${href}`;
-  navigate(url);
+    // Usamos el hash para encontrar el elemento y hacer scroll
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+    const url = `/${href}`;
+    navigate(url);
 
-  closeMenuBurger();
-};
+    closeMenuBurger();
+  };
 
-  // const handleLanguageToggle = () => {
-  //   const newLang = i18n.language === "ES" ? "EN" : "ES";
-  //   i18n.changeLanguage(newLang); // Cambia el idioma
-  // };
-
-  const btns = [
-    { textBtn: "Inicio", href: "#home", img: "home", alt: "home" },
-    { textBtn: "Sobre Mi", href: "#about", img: "about", alt: "about" },
-    { textBtn: "Experiencia", href: "#exp", img: "exp", alt: "exp" },
-    { textBtn: "Tecnologias", href: "#tech", img: "tech", alt: "tech" },
-    {
-      textBtn: "Portfolio",
-      href: "#portfolio",
-      img: "portfolio",
-      alt: "portfolio",
-    },
-    {
-      textBtn: "Contacto",
-      href: "#contact",
-      img: "contacto",
-      alt: "Contacto",
-    },
-  ];
+  // const btns = [
+  //   { textBtn: "Inicio", href: "#home", img: "home", alt: "home" },
+  //   { textBtn: "Sobre Mi", href: "#about", img: "about", alt: "about" },
+  //   { textBtn: "Experiencia", href: "#exp", img: "exp", alt: "exp" },
+  //   { textBtn: "Tecnologias", href: "#tech", img: "tech", alt: "tech" },
+  //   {
+  //     textBtn: "Portfolio",
+  //     href: "#portfolio",
+  //     img: "portfolio",
+  //     alt: "portfolio",
+  //   },
+  //   {
+  //     textBtn: "Contacto",
+  //     href: "#contact",
+  //     img: "contacto",
+  //     alt: "Contacto",
+  //   },
+  // ];
 
   return (
     <header>
@@ -103,12 +98,15 @@ const NavBar = ({ isForhero }) => {
                     key={i}
                   />
                 ))}
-                <div className="btn-nav-bar flex-container-row">
+                <div
+                  className="btn-nav-bar flex-container-row"
+                  onClick={onToggleLanguage}
+                >
                   <img
                     src="/public/icons/navbar/icon-language.svg"
                     alt="icono de mundo"
                   />
-                  <button className="language ">ES</button>
+                  <button className="language ">{textLanguage}</button>
                 </div>
               </div>
             </div>
@@ -134,6 +132,12 @@ const NavBar = ({ isForhero }) => {
             {menuOpen && (
               <div className="menu-burger-container">
                 <div className="menu-burger-content">
+                  <button
+                    onClick={onToggleLanguage}
+                    className="language p-btn "
+                  >
+                    {textLanguage}
+                  </button>
                   {btns.map((btn, i) => (
                     <a
                       key={i}
@@ -143,8 +147,9 @@ const NavBar = ({ isForhero }) => {
                       {btn.textBtn}
                     </a>
                   ))}
+
                   <button className="p-btn" onClick={closeMenuBurger}>
-                    Cerrar
+                    {close}
                   </button>
                 </div>
               </div>

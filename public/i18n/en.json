@@ -1,0 +1,268 @@
+{
+  "section": {
+    "init": {
+      "home": {
+        "textBtn": "Home",
+        "href": "#home",
+        "img": "home",
+        "alt": "home"
+      },
+      "about": {
+        "textBtn": "About Me",
+        "href": "#about",
+        "img": "about",
+        "alt": "about"
+      },
+      "exp": {
+        "textBtn": "Experience",
+        "href": "#exp",
+        "img": "exp",
+        "alt": "exp"
+      },
+      "tech": {
+        "textBtn": "Technologies",
+        "href": "#tech",
+        "img": "tech",
+        "alt": "tech"
+      },
+      "portfolio": {
+        "textBtn": "Portfolio",
+        "href": "#portfolio",
+        "img": "portfolio",
+        "alt": "portfolio"
+      },
+      "contact": {
+        "textBtn": "Contact",
+        "href": "#contact",
+        "img": "contacto",
+        "alt": "Contacto"
+      }
+    },
+    "close": "close",
+    "about": {
+      "title": "About me",
+      "paragraf1": "I am a Full-Stack developer who enjoys technology, programming, and problem-solving. I stand out for my ability to learn autonomously, as well as my adaptability and teamwork skills. I like to take on challenges that allow me to improve my skills and acquire new knowledge.",
+      "paragraf2": "In 2024, I graduated as a University Technician in Programming from the National Technological University. I have experience in both backend and frontend development.",
+      "paragraf3": "I am looking for an opportunity to apply my knowledge in real projects, continue growing professionally, and contribute to a development team with commitment and responsibility.",
+      "invitation": "You can download my Curriculum Vitae below for more information.",
+      "btnCv": "Download Resume"
+    },
+    "experience": {
+      "title": "Experience",
+      "exp": [
+        {
+          "title1": "FullStack",
+          "title2": "Codelens",
+          "title3": "December 2024 - Present 2025",
+          "description": "I collaborate as a Full-Stack developer, working in a team with other developers on various projects. I adapt to the project's needs, taking on roles in both frontend and backend, using technologies such as React, C#, .NET, and MySQL. This experience has allowed me to strengthen my technical and teamwork skills in a collaborative environment."
+        },
+        {
+          "title1": "FullStack1",
+          "title2": "Codelens",
+          "title3": "December 2024 - Present 2025",
+          "description": "I collaborate as a Full-Stack developer, working in a team with other developers on various projects. I adapt to the project's needs, taking on roles in both frontend and backend, using technologies such as React, C#, .NET, and MySQL. This experience has allowed me to strengthen my technical and teamwork skills in a collaborative environment."
+        }
+      ]
+    },
+    "tech": {
+      "title": "Technologies",
+      "paragraf1": "My training is Full-Stack.",
+      "paragraf2": "My focus is on adaptability to new technologies and teamwork, applying agile methodologies such as Scrum and Kanban.",
+      "paragraf3": "In Frontend, I have experience in creating small and medium-sized web applications using React, applying HTML, CSS, and JavaScript, as well as developing some animations. I have also worked with WordPress, creating custom plugins and optimizing functionalities.",
+      "paragraf4": "In Backend, I work with C# using ASP.NET Core, Entity Framework, and MySQL, allowing me to develop REST APIs and efficiently manage databases."
+    },
+
+    "contact": {
+      "title": "Contact me",
+      "inputs": {
+        "fullname": {
+          "label": "Full Name",
+          "placeholder": "John Doe",
+          "validation-error": "The field must be between 3 and 30 characters long and contain only letters."
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "example@example.com",
+          "invalid-mail-error": "You must enter a valid email.",
+          "validation-error": "The email must be between 6 and 25 characters long."
+        },
+        "content": {
+          "label": "Message",
+          "placeholder": "Enter your message here",
+          "validation-error": "The message must be at least 10 characters long.",
+          "size-error": "Maximum size exceeded."
+        },
+        "submit": "Submit",
+        "submiting": "Submitting..."
+      }
+    },
+
+    "modal": {
+      "modalSuccessful": {
+        "title": "Successful Submission!",
+        "text": "I will contact you soon."
+      },
+      "modalError": {
+        "title": "Submission Error",
+        "text": "An error occurred while sending the message. Please try again later."
+      }
+    },
+
+    "footer": {
+      "slogan": "Constantly learning to provide solutions",
+      "copyright": "@2025 Developed by Nicolas Romero Barrios.",
+      "btn": [
+        { "textBtn": "Inicio", "href": "#home" },
+        { "textBtn": "Tecnologias", "href": "#tech" },
+        {
+          "textBtn": "Portfolio",
+          "href": "#portfolio"
+        },
+        {
+          "textBtn": "Contacto",
+          "href": "#contact"
+        }
+      ]
+    }
+  },
+
+  "portfolios": {
+    "title": "Portfiolio",
+    "subtitle1": "Proyectos",
+    "subtitle2": "Colaboraciones",
+    "portfolio": [
+      {
+        "id": "1",
+        "Portfolio": "Proyect",
+        "title": "Portfolio Samuel Carranza 1",
+        "img": "portfolioSC",
+        "urlProyect": "/proyect",
+        "subtitle": "Landing page developed in React to showcase the professional work of a photographer and video editor.",
+        "description": "Visually appealing landing page developed in React that highlights Samuel's professional work as a photographer and video editor. The site features a dynamic gallery of photographs and videos, complemented by sections about his professional background and work experience. The page includes an 'About Me' section that provides insight into his story and passion for photography, along with a contact form for potential clients. The minimalist and elegant design ensures that the visual content takes center stage, creating an immersive experience for visitors.",
+        "responsibilities": "As a developer, I was responsible for implementing components and following the design created in Figma. I focused on creating a smooth and engaging user experience, developing custom elements such as the polaroid-style image gallery, the experience section, and other key components. I ensured that the design was fully responsive to provide an optimal experience across all devices.",
+        "tech": [
+          { "name": "CSS", "route": "css-icon" },
+          { "name": "git hub", "route": "github-icon" },
+          { "name": "git", "route": "git-icon" },
+          { "name": "HTML", "route": "html-icon" },
+          { "name": "javaScript", "route": "js-icon" },
+          { "name": "React", "route": "react-icon" },
+          { "name": "Visual Studio", "route": "visualStudio-icon" }
+        ],
+        "linkPage": "https://samuel-carranza.vercel.app/",
+        "linkGit": "https://github.com/Codelens-work/-Portfolio-Samuel-Carranza",
+        "date": "Date: December 2025",
+        "metadescription": {
+          "description": "."
+        },
+        "keywords": {
+          "home": [
+            "desarrollo web",
+            "frontend",
+            "aplicaciones web",
+            "desarrollo de APIs",
+            "portfolio"
+          ]
+        }
+      },
+      {
+        "id": "2",
+        "Portfolio": "Proyect",
+        "title": "Portfolio Samuel Carranza 1",
+        "img": "portfolioSC",
+        "urlProyect": "/proyect",
+        "subtitle": "Landing page desarrollada en React para exhibir el trabajo profesional de un fotógrafo y editor de videos.",
+        "description": "Landing page visualmente atractiva desarrollada en React que destaca el trabajo profesional de Samuel como fotógrafo y editor de videos. El sitio presenta una galería dinámica de fotografías y videos, complementada con secciones sobre su trayectoria profesional y experiencia laboral. La página incluye una sección 'Sobre mí' que permite conocer más sobre su historia y pasión por la fotografía, además de un formulario de contacto para potenciales clientes. El diseño minimalista y elegante permite que el contenido visual sea el protagonista, creando una experiencia inmersiva para los visitantes.",
+        "responsibilities": "Como desarrollador, fui responsable de la implementación de componentes y seguir el diseño realizado en figma. Me enfoqué en crear una experiencia de usuario fluida y atractiva, desarrollando elementos personalizados como la galería de imágenes tipo polaroid, la sección de experiencia y el coso t la cosa. Aseguré que el diseño fuera completamente responsivo para garantizar una experiencia óptima en todos los dispositivos.",
+        "tech": [
+          { "name": "CSS", "route": "css-icon" },
+          { "name": "git hub", "route": "github-icon" },
+          { "name": "git", "route": "git-icon" },
+          { "name": "HTML", "route": "html-icon" },
+          { "name": "javaScript", "route": "js-icon" },
+          { "name": "React", "route": "react-icon" },
+          { "name": "Visual Studio", "route": "visualStudio-icon" }
+        ],
+        "linkPage": "https://samuel-carranza.vercel.app/",
+        "linkGit": "https://github.com/Codelens-work/-Portfolio-Samuel-Carranza",
+        "date": "Fecha: Diciembre 2025",
+        "metadescription": {
+          "description": "."
+        },
+        "keywords": {
+          "home": [
+            "desarrollo web",
+            "frontend",
+            "aplicaciones web",
+            "desarrollo de APIs",
+            "portfolio"
+          ]
+        }
+      },
+      {
+        "id": "3",
+        "Portfolio": "Colab",
+        "title": "Portfolio Samuel Carranza 1",
+        "img": "portfolioSC",
+        "urlProyect": "/proyect",
+        "subtitle": "Landing page desarrollada en React para exhibir el trabajo profesional de un fotógrafo y editor de videos.",
+        "description": "Landing page visualmente atractiva desarrollada en React que destaca el trabajo profesional de Samuel como fotógrafo y editor de videos. El sitio presenta una galería dinámica de fotografías y videos, complementada con secciones sobre su trayectoria profesional y experiencia laboral. La página incluye una sección 'Sobre mí' que permite conocer más sobre su historia y pasión por la fotografía, además de un formulario de contacto para potenciales clientes. El diseño minimalista y elegante permite que el contenido visual sea el protagonista, creando una experiencia inmersiva para los visitantes.",
+        "responsibilities": "Como desarrollador, fui responsable de la implementación de componentes y seguir el diseño realizado en figma. Me enfoqué en crear una experiencia de usuario fluida y atractiva, desarrollando elementos personalizados como la galería de imágenes tipo polaroid, la sección de experiencia y el coso t la cosa. Aseguré que el diseño fuera completamente responsivo para garantizar una experiencia óptima en todos los dispositivos.",
+        "tech": [
+          { "name": "CSS", "route": "css-icon" },
+          { "name": "git hub", "route": "github-icon" },
+          { "name": "git", "route": "git-icon" },
+          { "name": "HTML", "route": "html-icon" },
+          { "name": "javaScript", "route": "js-icon" },
+          { "name": "React", "route": "react-icon" },
+          { "name": "Visual Studio", "route": "visualStudio-icon" }
+        ],
+        "linkPage": "https://samuel-carranza.vercel.app/",
+        "linkGit": "https://github.com/Codelens-work/-Portfolio-Samuel-Carranza",
+        "date": "Fecha: Diciembre 2025",
+        "metadescription": {
+          "description": "."
+        },
+        "keywords": {
+          "home": [
+            "desarrollo web",
+            "frontend",
+            "aplicaciones web",
+            "desarrollo de APIs",
+            "portfolio"
+          ]
+        }
+      }
+    ]
+  },
+  "404": {
+    "title": "404 ERROR",
+    "subTitle": "The page you’re looking for dosen’t exist or has been moved.",
+    "paragraf": "Oops! Looks likes you’ve got lost...",
+    "btn": "Home"
+  },
+
+  "metadescription": {
+    "home": "En CodeLens creamos soluciones digitales a medida. Desarrollo web, diseño web, SEO y aplicaciones web para potenciar tu negocio en el mundo digital.",
+    "404": "Parece que te has perdido en el camino. La página que buscas no existe o ha sido movida. ¡Vuelve a la página de inicio y sigue explorando!"
+  },
+  "keywords": {
+    "home": [
+      "desarrollo web",
+      "backend",
+      "frontend",
+      "base de datos",
+      "aplicaciones web",
+      "desarrollo de APIs",
+      "Nicolas Romero Barrios"
+    ],
+    "404": [
+      "error 404",
+      "página no encontrada",
+      "contenido no disponible",
+      "enlace roto",
+      "recurso no encontrado",
+      "CodeLens"
+    ]
+  }
+}

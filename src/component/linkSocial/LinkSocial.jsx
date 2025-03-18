@@ -26,7 +26,7 @@ const LinkSocial = ({ size, isForhero }) => {
       ) : (
         <div className="email">
           <a
-            href="https://nicolasromero.barrios@gmail.com"
+          href="mailto:nicolasromero.barrios@gmail.com"
             target="_blank"
             aria-label="e-mail"
           >
