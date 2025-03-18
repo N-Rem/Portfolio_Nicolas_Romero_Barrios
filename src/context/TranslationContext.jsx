@@ -51,7 +51,7 @@ export const TranslationContextProvider = ({ children }) => {
 
   //footer
 let sectionFooterSlogan = t("section.footer.slogan");
-let sectionFooterCopyrigt = t("section.footer.copyrigt");
+let sectionFooterCopyright  = t("section.footer.copyright");
 let sectionFooterBtn = t("section.footer.btn");
 
   return (
@@ -76,7 +76,7 @@ let sectionFooterBtn = t("section.footer.btn");
         section404,
 
         sectionFooterSlogan,
-        sectionFooterCopyrigt,
+        sectionFooterCopyright,
         sectionFooterBtn
       }}
     >

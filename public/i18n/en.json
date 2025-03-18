@@ -94,17 +94,16 @@
         },
         "submit": "Submit",
         "submiting": "Submitting..."
-      }
-    },
-
-    "modal": {
-      "modalSuccessful": {
-        "title": "Successful Submission!",
-        "text": "I will contact you soon."
       },
-      "modalError": {
-        "title": "Submission Error",
-        "text": "An error occurred while sending the message. Please try again later."
+      "modal": {
+        "modalSuccessful": {
+          "title": "Successful Submission!",
+          "text": "I will contact you soon."
+        },
+        "modalError": {
+          "title": "Submission Error",
+          "text": "An error occurred while sending the message. Please try again later."
+        }
       }
     },
 
@@ -112,14 +111,20 @@
       "slogan": "Constantly learning to provide solutions",
       "copyright": "@2025 Developed by Nicolas Romero Barrios.",
       "btn": [
-        { "textBtn": "Inicio", "href": "#home" },
-        { "textBtn": "Tecnologias", "href": "#tech" },
+        {
+          "textBtn": "Home",
+          "href": "#home"
+        },
+        {
+          "textBtn": "Technologies",
+          "href": "#tech"
+        },
         {
           "textBtn": "Portfolio",
           "href": "#portfolio"
         },
         {
-          "textBtn": "Contacto",
+          "textBtn": "Contact",
           "href": "#contact"
         }
       ]
@@ -128,8 +133,8 @@
 
   "portfolios": {
     "title": "Portfiolio",
-    "subtitle1": "Proyectos",
-    "subtitle2": "Colaboraciones",
+    "subtitle1": "Projects",
+    "subtitle2": "Collaborations",
     "portfolio": [
       {
         "id": "1",
