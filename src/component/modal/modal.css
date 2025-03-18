@@ -1,0 +1,121 @@
+.modal {
+    position        : fixed;
+    z-index         : 999;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    min-height      : 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    display         : none;
+    justify-content : center;
+    align-items     : center;
+}
+
+.modal.is-open {
+    display: flex;
+}
+
+.modal-conteiner {
+    gap     : 10px;
+    position: relative;
+    width   : clamp(15rem, 15vw + 15rem, 30rem);
+
+    min-width       : 280px;
+    max-width       : 480px;
+    min-height      : 200px;
+    max-height      : 600px;
+    overflow-y      : auto;
+    border-radius   : 20px;
+    padding         : 1.9rem;
+    background-color: var(--dark-green);
+
+
+}
+
+
+.modal p {
+    color      : var(--white);
+    text-align : center;
+    line-height: 25px;
+}
+
+.modal h2 {
+    color     : var(--white);
+    font-size : clamp(1.5rem, 1.5vw + 1.5rem, 3rem);
+    transform : none;
+    transition: none;
+}
+
+.modal h2::before {
+    content   : none;
+    position  : none;
+    bottom    : 0;
+    width     : 0;
+    height    : 0;
+    transition: none
+}
+
+
+
+
+
+.modal-cloes {
+    position  : absolute;
+    top       : 1rem;
+    right     : 1rem;
+    width     : 3rem;
+    height    : auto;
+    background: transparent;
+    border    : none;
+}
+
+.modal-cloes:hover {
+    scale: 1.1;
+}
+
+.modal-container-yellow {
+    /*variable que cambai con js para crear el vorde interactivo*/
+    --rotation      : 100deg;
+    background-color: var(--black);
+    margin          : 0;
+    padding         : 0;
+    width           : clamp(15rem, 15vw + 15rem, 30rem);
+    ;
+    height: clamp(7rem, 7vw + 7rem, 15rem);
+
+
+    border           : 3px solid transparent;
+    border-radius    : 1em;
+    background-origin: border-box;
+    background-clip  : padding-box, border-box;
+    position         : relative;
+    overflow         : hidden;
+    padding          : 4%;
+    display          : flex;
+    justify-content  : center;
+    align-items      : center;
+    will-change      : background;
+
+    /* borde amarillo sae usa la bariable rotacion que cambia gracias al js */
+    background-image: linear-gradient(var(--black), var(--black)),
+        conic-gradient(from var(--rotation),
+            var(--cyberpunk-yellow) 0deg,
+            var(--cyberpunk-yellow) 90deg,
+            var(--black) 90deg,
+            var(--black) 360deg);
+    background-origin: border-box;
+    background-clip  : padding-box, border-box;
+    transition       : background 0.2s ease-in-out;
+
+}
+
+
+@media(max-width: 690px) {
+    .modal-container-yellow {
+        width: clamp(15rem, 15vw + 15rem, 31rem);
+        height: clamp(9rem, 9vw + 9rem, 18rem);
+
+    }
+
+
+}

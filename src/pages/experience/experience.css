@@ -1,0 +1,7 @@
+.exp-container {
+    width     : 100vw;
+    margin-top: 3rem;
+    gap       : 1rem;
+    overflow  : hidden;
+    position  : relative;
+}

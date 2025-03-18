@@ -1,21 +1,159 @@
-:root{
-    --midnightblue: #132644; 
-    --darkslategray: #46434C; 
-    --watermelon: rgb(253, 150, 155); 
-    --lightbrownyellow: rgb(255, 198, 116); 
-    --lightbrownyellow2: rgb(255, 187, 102);
-    --white: #ECEDEE;
-  }
+:root {
+  --black           : #042222;
+  --blackT          : rgba(4, 34, 34, 0.5);
+  --white           : rgb(241, 247, 247);
+  --whiteT          : rgba(241, 247, 247, 0.5);
+  --whiteT2         : rgba(241, 247, 247, .3);
+  --dark-green      : #03624c;
+  --dark-greenT     : rgba(3, 98, 76, 0.5);
+  --dark-greenT2    : rgba(3, 98, 76, 0.3);
+  --pastel-green    : #2cc295;
+  --pastel-greenT   : rgba(44, 194, 149, 0.5);
+  --pastel-greenT2  : rgba(44, 194, 149, 0.3);
+  --strong-green    : #00df82;
+  --strong-greenT   : rgba(0, 223, 130, 0.5);
+  --strong-greenT2  : rgba(0, 223, 130, 0.3);
+  --strong-greenT3  : rgba(0, 223, 130, 0.1);
+  --cyberpunk-yellow: #DAFF3E;
+
+  --main-font: 'Roboto Mono', monospace;
+
+}
+
+* {
+  box-sizing : border-box;
+  font-family: var(--main-font);
+  color      : var(--black)
+}
+
+
+
+html {
+  font-family     : var(--main-font);
+  background-color: var(--white);
+  max-width       : 1400px;
+  width           : 100%;
+  padding         : 0;
+  margin          : 0;
+  overflow-x      : hidden;
+}
+html::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px; 
+}
+
+html::-webkit-scrollbar-track {
+  background: rgb(185, 202, 202);
+}
+
+/* Color de la barra de desplazamiento */
+html::-webkit-scrollbar-thumb {
+  background: var(--dark-green); 
+  border-radius: 4px; 
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--pastel-green);
+}
+
+
+body {
+  display        : flex;
+  justify-content: center;
+  justify-self   : center;
+  align-items    : center;
+  flex-direction : column;
+  margin         : 0;
+}
+
+h1 {
+  font-size: clamp(1rem, 1.625vw + 1.625rem, 5.25rem);
+  padding  : 0;
+  margin   : 0;
+}
+
+h2 {
+  font-size: clamp(1rem, 2vw + 2rem, 4.625rem);
+  padding  : 0;
+  margin   : 0;
   
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  
-  html{
-    font-family: "Roboto", serif;
-    background-color: var(--lightbrownyellow);
-    overflow-x: hidden;
-  }
+  font-weight: lighter;
+  text-align : center;
+  transition : 2s;
+  margin     : 0;
+  padding    : 0;
+}
+
+h2:hover {
+  transform: scale(1.1);
+}
+
+h2::before {
+  content         : "";
+  position        : absolute;
+  bottom          : 0;
+  left            : 50%;
+  width           : 0;
+  height          : 3px;
+  background-color: var(--cyberpunk-yellow);
+  transition      : width 0.5s ease, left 0.5s ease;
+}
+
+h2:hover::before {
+  width: 100%;
+  left : 0;
+}
+
+h3 {
+  font-size: clamp(1rem, 1vw + 1rem, 2.125rem);
+
+  padding: 0;
+  margin : 0;
+
+}
+
+p {
+  font-size: clamp(.5rem, 0.125vw + 0125rem, 1.125rem);
+  padding  : 0;
+  margin   : 0;
+
+}
+
+/* 
+header {
+  width: 100vw;  
+  height: auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: .5rem;
+  margin: 1rem;
+} */
+
+.p-btn {
+  font-size: clamp(.5rem, .5vw + .5rem, 1rem);
+
+  text-decoration: none;
+}
+
+.flex-container-column {
+  /*elementos uno arriba de otro como columnas.*/
+  display        : flex;
+  justify-content: center;
+  justify-self   : center;
+  align-items    : center;
+  flex-direction : column;
+  margin         : 0;
+  position       : relative;
+}
+
+
+.flex-container-row {
+  display        : flex;
+  justify-content: center;
+  justify-self   : center;
+  align-items    : center;
+  flex-direction : row;
+  position       : relative;
+}
