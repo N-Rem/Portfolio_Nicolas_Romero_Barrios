@@ -1,22 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "./footer.css";
 import LinkSocial from "../../linkSocial/LinkSocial";
 import { useNavigate } from "react-router-dom";
+import { TranslationContext } from "../../../context/TranslationContext";
 
 const Footer = () => {
-  const btns = [
-    { textBtn: "Inicio", href: "#home" },
-    { textBtn: "Tecnologias", href: "#tech" },
-    {
-      textBtn: "Portfolio",
-      href: "#portfolio",
-    },
-    {
-      textBtn: "Contacto",
-      href: "#contact",
-    },
-  ];
+  const { sectionFooterSlogan, sectionFooterCopyrigt, sectionFooterBtn } =
+    useContext(TranslationContext);
+
+
 
   const navegate = useNavigate();
 
@@ -37,18 +30,18 @@ const Footer = () => {
             <h1>Nicolas Romero barrios</h1>
           </a>
           <h2>Developer FullStack</h2>
-          <p>Aprendiendo constantemente para brindar soluciones</p>
+          <p>{sectionFooterSlogan}</p>
         </div>
 
         <div className="content-social-copy">
           <LinkSocial />
           <div className="copyright">
-            <p>@2025 Desarrollado por Nicolas Romero Barrios.</p>
+            <p>{sectionFooterCopyrigt}</p>
           </div>
         </div>
 
         <div className="content-nav">
-          {btns.map((btn, i) => (
+          {sectionFooterBtn.map((btn, i) => (
             <a
               key={i}
               className="p-btn"

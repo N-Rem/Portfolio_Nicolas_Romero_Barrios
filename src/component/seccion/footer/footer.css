@@ -4,6 +4,7 @@ footer {
   background: linear-gradient(to bottom, #F1F7F7 0%, #D8F0EB 18%, #B7E7DA 31%, #A8E3D3 42%);
   margin-top: 30px;
   overflow-x: hidden;
+  padding: 1rem;
 
 }
 

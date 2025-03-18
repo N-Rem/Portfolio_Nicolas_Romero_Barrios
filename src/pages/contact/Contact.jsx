@@ -1,16 +1,19 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 
 import "./contact.css";
-import Modal from "../../modal/Modal";
+import Modal from "/src/component/modal/Modal.jsx";
+import { TranslationContext } from "/src/context/TranslationContext.jsx";
 
 const Contact = () => {
+  const { sectionContact } = useContext(TranslationContext);
+
   // const { t, i18n } = useTranslation();
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const [msjModal, setMsjModal] = useState({
     title: "",
     text: "",
@@ -45,25 +48,23 @@ const Contact = () => {
       if (name === "name") {
         newErrors.name = [];
         if (!nameRegex.test(value))
-          newErrors.name.push(
-            "El nombre debe tener mas de 3 letras y no debe contenter numeros."
-          );
+          newErrors.name.push(sectionContact.inputs.fullname.validationError);
       }
 
       if (name === "email") {
         newErrors.email = [];
         if (value.length < 6 || value.length > 250)
-          newErrors.email.push("El email debe tener entre 6 y 25 digitos");
+          newErrors.email.push(sectionContact.inputs.email.validationError);
         if (!emailRegex.test(value))
-          newErrors.email.push("El formato no es valido");
+          newErrors.email.push(sectionContact.inputs.email.invalidMailError);
       }
 
       if (name === "message") {
         newErrors.message = [];
         if (value.trim().length < 10)
-          newErrors.message.push("El texto deve tener mas de 10 digitos.");
+          newErrors.message.push(sectionContact.inputs.content.validationError);
         if (value.trim().length > 200)
-          newErrors.message.push("El solo se aceptan 200 digitos");
+          newErrors.message.push(sectionContact.inputs.content.sizeError);
       }
 
       return newErrors;
@@ -80,33 +81,29 @@ const Contact = () => {
     let formIsValid = true;
 
     if (!formData.name.trim() || !nameRegex.test(formData.name)) {
-      newErrors.name.push(
-        "El campo debe tener entre 3 y 30 caracteres y contener sólo letras."
-      );
+      newErrors.name.push(sectionContact.inputs.fullname.validationError);
       nameRef.current.focus();
       formIsValid = false;
     }
 
     if (!formData.email.trim() || !emailRegex.test(formData.email)) {
       if (formData.email.length < 6 || formData.email.length > 250) {
-        newErrors.email.push("El email debe tener entre 6 y 25 caracteres");
+        newErrors.email.push(sectionContact.inputs.email.validationError);
       }
       if (!emailRegex.test(formData.email)) {
-        newErrors.email.push("Debe ingresar un email válido");
+        newErrors.email.push(sectionContact.inputs.email.invalidMailError);
       }
       if (formIsValid) emailRef.current.focus();
       formIsValid = false;
     }
 
     if (!formData.message.trim() || formData.message.length < 10) {
-      newErrors.message.push(
-        "El mensaje debe tener como minimo 10 caracteres."
-      );
+      newErrors.message.push(sectionContact.inputs.content.validationError);
       if (formIsValid) messageRef.current.focus();
       formIsValid = false;
     }
     if (formData.message.length > 200) {
-      newErrors.message.push("Tamaño máximo superado.");
+      newErrors.message.push(sectionContact.inputs.content.sizeError);
       if (formIsValid) messageRef.current.focus();
       formIsValid = false;
     }
@@ -122,16 +119,15 @@ const Contact = () => {
         message: "",
       });
 
-      setIsSubmitting(false); // Desbloquea el botón
     }
+    setIsSubmitting(false); // Desbloquea el botón
   };
 
   /*SECCION DEL MODAL */
-  const modalSuccessTitle = "¡Envio exitoso!";
-  const modalSuccessText = "Pronto me pondre en contacto contigo";
-  const modalErrorTitle = "¡Error en el envío!";
-  const modalErrorText =
-    "Se produjo un error al enviar el mensaje. Intenta nuevamente mas tarde";
+  const modalSuccessTitle = sectionContact.modal.modalSuccessful.title;
+  const modalSuccessText = sectionContact.modal.modalSuccessful.text;
+  const modalErrorTitle = sectionContact.modal.modalError.title;
+  const modalErrorText = sectionContact.modal.modalError.text;
 
   const closeModal = () => setShowModal(false);
 
@@ -167,18 +163,20 @@ const Contact = () => {
     <div
       id="contact"
       className="flex-container-column "
-      onSubmit={handlerSubmit} 
+      onSubmit={handlerSubmit}
     >
-      <h2 className="title-contact">Contactame</h2>
+      <h2 className="title-contact">{sectionContact.title}</h2>
       <div className="container-form-section flex-container-column">
-        <form className="form-container" >
+        <form className="form-container">
           <div className="form-group flex-container-column">
-            <label className="label-text">Nombre Completo</label>
+            <label className="label-text">
+              {sectionContact.inputs.fullname.label}
+            </label>
             <input
               ref={nameRef}
               name="name"
               type="text"
-              placeholder=" Ingresa tu nombre"
+              placeholder={sectionContact.inputs.fullname.placeholder}
               className={`form-control ${
                 errors.name.length > 0 ? "error" : ""
               }`}
@@ -197,12 +195,12 @@ const Contact = () => {
           )}
 
           <div className="form-group flex-container-column">
-            <label className="label-text">Email</label>
+            <label className="label-text">{sectionContact.inputs.email.label}</label>
             <input
               ref={emailRef}
               name="email"
               type="email"
-              placeholder=" Ingresa tu email"
+              placeholder={sectionContact.inputs.email.placeholder}
               className={`form-control ${
                 errors.email.length > 0 ? "error" : ""
               }`}
@@ -221,11 +219,11 @@ const Contact = () => {
           )}
 
           <div className="form-group flex-container-column">
-            <label className="label-text">Mensaje</label>
+            <label className="label-text">{sectionContact.inputs.content.label}</label>
             <textarea
               ref={messageRef}
               name="message"
-              placeholder=" Escribe tu mensaje"
+              placeholder={sectionContact.inputs.content.placeholder}
               className={`form-control form-textarea ${
                 errors.message.length > 0 ? "error" : ""
               }`}
@@ -245,8 +243,14 @@ const Contact = () => {
           )}
 
           <div className="button-contact-container flex-container-row">
-            <button type="submit" className="contact-button" disabled={isSubmitting}>
-              <span className="btn-text">{isSubmitting ? "Enviando..." : "Enviar"}</span>
+            <button
+              type="submit"
+              className="contact-button"
+              disabled={isSubmitting}
+            >
+              <span className="btn-text">
+                {isSubmitting ? sectionContact.inputs.submiting: sectionContact.inputs.submit}
+              </span>
             </button>
           </div>
         </form>
@@ -254,8 +258,8 @@ const Contact = () => {
           <Modal
             onClose={showModal}
             onCloseModal={closeModal}
-            title={modalSuccessTitle}
-            text={modalSuccessText}
+            title={msjModal.title}
+            text={msjModal.text}
           />
         )}
       </div>
