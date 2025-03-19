@@ -12,6 +12,8 @@
     width: clamp(22rem, 32vw + 32rem, 54rem);
     gap: 1rem;
     
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin: 0;
     text-align : center;
     white-space: wrap;
