@@ -103,7 +103,7 @@ const NavBar = ({ isForhero }) => {
                   onClick={onToggleLanguage}
                 >
                   <img
-                    src="/public/icons/navbar/icon-language.svg"
+                    src="../icons/navbar/icon-language.svg"
                     alt="icono de mundo"
                   />
                   <button className="language ">{textLanguage}</button>
@@ -126,7 +126,7 @@ const NavBar = ({ isForhero }) => {
                 aria-expanded={menuOpen}
                 aria-controls="menu"
               >
-                <img src="/public/icons/navbar/icon-menu.svg" alt="menu" />
+                <img src="../icons/navbar/icon-menu.svg" alt="menu" />
               </button>
             </div>
             {menuOpen && (

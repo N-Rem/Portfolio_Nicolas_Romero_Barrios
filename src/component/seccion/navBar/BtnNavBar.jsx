@@ -4,7 +4,7 @@ import { useNavigate} from "react-router-dom";
 import PropTypes from "prop-types";
 
 const BtnNavBar = ({ textBtn, href, img, alt }) => {
-  const src = `/public/icons/navbar/icon-${img}.svg`;
+  const src = `../icons/navbar/icon-${img}.svg`;
   const navigate = useNavigate();
 
   const buttonHandler = (href) => {

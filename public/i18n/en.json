@@ -133,94 +133,26 @@
 
   "portfolios": {
     "title": "Portfiolio",
-    "subtitle1": "Projects",
-    "subtitle2": "Collaborations",
+    "subtitle1": "Proyectos",
+    "subtitle2": "Colaboraciones",
     "portfolio": [
       {
         "id": "1",
         "Portfolio": "Proyect",
-        "title": "Portfolio Samuel Carranza 1",
-        "img": "portfolioSC",
-        "urlProyect": "/proyect",
-        "subtitle": "Landing page developed in React to showcase the professional work of a photographer and video editor.",
-        "description": "Visually appealing landing page developed in React that highlights Samuel's professional work as a photographer and video editor. The site features a dynamic gallery of photographs and videos, complemented by sections about his professional background and work experience. The page includes an 'About Me' section that provides insight into his story and passion for photography, along with a contact form for potential clients. The minimalist and elegant design ensures that the visual content takes center stage, creating an immersive experience for visitors.",
-        "responsibilities": "As a developer, I was responsible for implementing components and following the design created in Figma. I focused on creating a smooth and engaging user experience, developing custom elements such as the polaroid-style image gallery, the experience section, and other key components. I ensured that the design was fully responsive to provide an optimal experience across all devices.",
-        "tech": [
-          { "name": "CSS", "route": "css-icon" },
-          { "name": "git hub", "route": "github-icon" },
-          { "name": "git", "route": "git-icon" },
-          { "name": "HTML", "route": "html-icon" },
-          { "name": "javaScript", "route": "js-icon" },
-          { "name": "React", "route": "react-icon" },
-          { "name": "Visual Studio", "route": "visualStudio-icon" }
-        ],
-        "linkPage": "https://samuel-carranza.vercel.app/",
-        "linkGit": "https://github.com/Codelens-work/-Portfolio-Samuel-Carranza",
-        "date": "Date: December 2025",
-        "metadescription": {
-          "description": "."
-        },
-        "keywords": {
-          "home": [
-            "desarrollo web",
-            "frontend",
-            "aplicaciones web",
-            "desarrollo de APIs",
-            "portfolio"
-          ]
-        }
-      },
-      {
-        "id": "2",
-        "Portfolio": "Proyect",
-        "title": "Portfolio Samuel Carranza 1",
+        "title": "Portfolio Samuel Carranza",
         "img": "portfolioSC",
         "urlProyect": "/proyect",
         "subtitle": "Landing page desarrollada en React para exhibir el trabajo profesional de un fotógrafo y editor de videos.",
         "description": "Landing page visualmente atractiva desarrollada en React que destaca el trabajo profesional de Samuel como fotógrafo y editor de videos. El sitio presenta una galería dinámica de fotografías y videos, complementada con secciones sobre su trayectoria profesional y experiencia laboral. La página incluye una sección 'Sobre mí' que permite conocer más sobre su historia y pasión por la fotografía, además de un formulario de contacto para potenciales clientes. El diseño minimalista y elegante permite que el contenido visual sea el protagonista, creando una experiencia inmersiva para los visitantes.",
         "responsibilities": "Como desarrollador, fui responsable de la implementación de componentes y seguir el diseño realizado en figma. Me enfoqué en crear una experiencia de usuario fluida y atractiva, desarrollando elementos personalizados como la galería de imágenes tipo polaroid, la sección de experiencia y el coso t la cosa. Aseguré que el diseño fuera completamente responsivo para garantizar una experiencia óptima en todos los dispositivos.",
         "tech": [
-          { "name": "CSS", "route": "css-icon" },
           { "name": "git hub", "route": "github-icon" },
           { "name": "git", "route": "git-icon" },
           { "name": "HTML", "route": "html-icon" },
-          { "name": "javaScript", "route": "js-icon" },
-          { "name": "React", "route": "react-icon" },
-          { "name": "Visual Studio", "route": "visualStudio-icon" }
-        ],
-        "linkPage": "https://samuel-carranza.vercel.app/",
-        "linkGit": "https://github.com/Codelens-work/-Portfolio-Samuel-Carranza",
-        "date": "Fecha: Diciembre 2025",
-        "metadescription": {
-          "description": "."
-        },
-        "keywords": {
-          "home": [
-            "desarrollo web",
-            "frontend",
-            "aplicaciones web",
-            "desarrollo de APIs",
-            "portfolio"
-          ]
-        }
-      },
-      {
-        "id": "3",
-        "Portfolio": "Colab",
-        "title": "Portfolio Samuel Carranza 1",
-        "img": "portfolioSC",
-        "urlProyect": "/proyect",
-        "subtitle": "Landing page desarrollada en React para exhibir el trabajo profesional de un fotógrafo y editor de videos.",
-        "description": "Landing page visualmente atractiva desarrollada en React que destaca el trabajo profesional de Samuel como fotógrafo y editor de videos. El sitio presenta una galería dinámica de fotografías y videos, complementada con secciones sobre su trayectoria profesional y experiencia laboral. La página incluye una sección 'Sobre mí' que permite conocer más sobre su historia y pasión por la fotografía, además de un formulario de contacto para potenciales clientes. El diseño minimalista y elegante permite que el contenido visual sea el protagonista, creando una experiencia inmersiva para los visitantes.",
-        "responsibilities": "Como desarrollador, fui responsable de la implementación de componentes y seguir el diseño realizado en figma. Me enfoqué en crear una experiencia de usuario fluida y atractiva, desarrollando elementos personalizados como la galería de imágenes tipo polaroid, la sección de experiencia y el coso t la cosa. Aseguré que el diseño fuera completamente responsivo para garantizar una experiencia óptima en todos los dispositivos.",
-        "tech": [
           { "name": "CSS", "route": "css-icon" },
-          { "name": "git hub", "route": "github-icon" },
-          { "name": "git", "route": "git-icon" },
-          { "name": "HTML", "route": "html-icon" },
           { "name": "javaScript", "route": "js-icon" },
           { "name": "React", "route": "react-icon" },
-          { "name": "Visual Studio", "route": "visualStudio-icon" }
+          { "name": "VS Code", "route": "vsCode-icon" }
         ],
         "linkPage": "https://samuel-carranza.vercel.app/",
         "linkGit": "https://github.com/Codelens-work/-Portfolio-Samuel-Carranza",
