@@ -169,13 +169,15 @@ h2.title2:hover::before {
     position : absolute;
     left     : calc(50% - max(20vw, 80px));
     transform: translateX(-100%);
-    
+
 
 }
+
 .left-arrow:active {
     transform : translateX(-110%);
     transition: transform 0.2s ease-in-out;
 }
+
 .left-arrow img:hover {
     transform : scale(1.1);
     transition: transform 0.2s ease-in-out;
@@ -186,12 +188,14 @@ h2.title2:hover::before {
     position : absolute;
     left     : calc(50% + max(20vw, 80px));
     transform: translateX(0);
-    
+
 }
+
 .right-arrow:active {
     transform : translateX(10%);
     transition: transform 0.2s ease-in-out;
 }
+
 .right-arrow img:hover {
     transform : scale(1.1);
     transition: transform 0.2s ease-in-out;
@@ -201,12 +205,12 @@ h2.title2:hover::before {
 .left-arrow button {
     background: none;
     border    : none;
-    cursor: pointer;
+    cursor    : pointer;
 }
 
 .right-arrow img,
 .left-arrow img {
-    width: clamp(2rem, 2vw + 2rem, 4.188rem);
+    width : clamp(2rem, 2vw + 2rem, 4.188rem);
     cursor: pointer;
 }
 
@@ -217,5 +221,12 @@ h2.title2:hover::before {
 
     .right-arrow {
         left: calc(50% + max(20vw, 36vw));
+    }
+}
+
+@media(max-width: 550px) {
+    
+    .first-container {
+        height : clamp(15rem, 15vw + 15rem, 30rem);
     }
 }

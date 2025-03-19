@@ -1,12 +1,12 @@
-@keyframes spin {
+@keyframes float {
     0% {
-        transform: rotate(0deg);
-        /* Inicio: sin rotación */
+        transform: translateY(0px);
     }
-
+    50% {
+        transform: translateY(-9px);
+    }
     100% {
-        transform: rotate(360deg);
-        /* Fin   : rotación completa */
+        transform: translateY(0px); /* Vuelve a la posición original */
     }
 }
 
@@ -48,7 +48,7 @@
     margin   : 0;
     width    : clamp(8.5rem, 8.5vw + 8.5rem, 16.3rem);
     height   : auto;
-    animation: spin 2s linear infinite;
+    animation: float 2s linear infinite;
 }
 
 .photo-container img {
@@ -66,16 +66,18 @@
     margin-left: 2rem;
     gap        : 1rem;
     padding    : 0;
+    
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     width : clamp(16rem, 16vw + 16rem, 32rem);
     height: auto;
 }
 
 .content-container p {
-    font-size : clamp(.5rem, .6vw + .6rem, 1rem);
+    /* font-size : clamp(.5rem, .6vw + .6rem, 1rem); */
     word-wrap : break-word;
     text-align: left;
-
     max-width: 100%;
 
 }
@@ -96,7 +98,7 @@
     gap:2rem;
 }
 .buttonCv-container p{
-    font-size : clamp(.5rem, .6vw + .6rem, 1rem);
+    /* font-size : clamp(.5rem, .6vw + .6rem, 1rem); */
     text-align: center;
 }
 .buttonCv-container a{

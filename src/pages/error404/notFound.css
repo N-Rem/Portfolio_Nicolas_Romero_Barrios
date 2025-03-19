@@ -5,4 +5,30 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 1rem;
+}
+.msj-container{
+    gap: 1rem;
+
+}
+
+.msj-container p,
+.msj-container h1{
+    color: var(--white)
+}
+
+@media(max-width:930px){
+    .msj-container{
+        gap: .5rem;
+    }
+}@media(max-width:780px){
+    .msj-container{
+        gap: 3rem;
+    }
+}
+
+@media(max-width:370px){
+    .msj-container{
+        gap: 2rem;
+    }
 }
