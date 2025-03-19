@@ -35,7 +35,7 @@ const SliderTech = ({ techs }) => {
                 key={i}
               >
                 <img
-                  src={`../public/icons/tech/${icon.route}.svg`}
+                  src={`../icons/tech/${icon.route}.svg`}
                   alt={icon.name}
                 />
                 <p>{icon.name}</p>
@@ -48,7 +48,7 @@ const SliderTech = ({ techs }) => {
                 key={i}
               >
                 <img
-                  src={`../public/icons/tech/${icon.route}.svg`}
+                  src={`../icons/tech/${icon.route}.svg`}
                   alt={icon.name}
                 />
                 <p>{icon.name}</p>
