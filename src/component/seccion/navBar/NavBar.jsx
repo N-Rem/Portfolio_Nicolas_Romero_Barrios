@@ -55,9 +55,17 @@ const NavBar = ({ isForhero }) => {
     const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
+    } else {
+      const url = `/${href}`;
+      navigate(url);
+
+      setTimeout(() => {
+        const newTarget = document.querySelector(href);
+        if (newTarget) {
+          newTarget.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 50);
     }
-    const url = `/${href}`;
-    navigate(url);
 
     closeMenuBurger();
   };

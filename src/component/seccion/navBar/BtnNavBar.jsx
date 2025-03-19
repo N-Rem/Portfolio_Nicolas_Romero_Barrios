@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import PropTypes from "prop-types";
 
@@ -11,10 +11,18 @@ const BtnNavBar = ({ textBtn, href, img, alt }) => {
     const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(`/${href}`);
+      setTimeout(() => {
+        const newTarget = document.querySelector(href);
+        if (newTarget) {
+          newTarget.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 50); // Espera 500ms para que la nueva página cargue antes de hacer scroll
     }
-    
-  const url = `/${href}`;
-    navigate(url)
+
+    const url = `/${href}`;
+    navigate(url);
   };
 
   return (
