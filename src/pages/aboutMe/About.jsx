@@ -8,14 +8,14 @@ const About = () => {
  
   // const cvNRB  = t("about.cvFile");
   const cvNicolasRomeroBarrios = `Nicolás-Romero-Barrios-cv-${textLanguage.toLowerCase()}`;
-  const cvRout = `/public/cvs/Nicolás-Romero-Barrios-cv-${textLanguage.toLowerCase()}.pdf`;
+  const cvRout = `../cvs/Nicolás-Romero-Barrios-cv-${textLanguage.toLowerCase()}.pdf`;
 
     return (
     <div className="flex-container-column">
       <h2 id="about">{sectionAbout.title}</h2>
       <div className="about-container flex-container-row">
         <div className="photo-container">
-          <img alt="my-photo" src="/public/imgs/photo-redona.svg" />
+          <img alt="my-photo" src="../imgs/photo-redona.svg" />
         </div>
         <div className="content-container flex-container-column">
           <p>{sectionAbout.paragraf1}</p>

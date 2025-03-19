@@ -13,7 +13,7 @@ const PhotoPortfolio = ({ img, title, subtitle, linkGit, linkPage, date }) => {
         <p> {subtitle}</p>
       </div>
       <div className="photo-portfolio-container flex-container-column">
-        <img src={`/public/imgs/portfolio/${img}.svg`} alt={img} />
+        <img src={`../imgs/portfolio/${img}.svg`} alt={img} />
       </div>
 
       <div className="icons-portfolio-container flex-container-row">

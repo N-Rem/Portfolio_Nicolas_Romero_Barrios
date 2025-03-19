@@ -17,7 +17,7 @@ const CardPortfolio = ({ title, img, url, id }) => {
       className="card-portfolio-container"
     >
       <div className="flex-container-column card">
-        <img src={`/public/imgs/portfolio/${url}.svg`} alt={img} />
+        <img src={`../imgs/portfolio/${url}.svg`} alt={img} />
         <h3 className="titleProyect">
           {title}
           <span className="effect"></span>
