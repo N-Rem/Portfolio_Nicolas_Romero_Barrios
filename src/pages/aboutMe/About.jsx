@@ -15,7 +15,7 @@ const About = () => {
       <h2 id="about">{sectionAbout.title}</h2>
       <div className="about-container flex-container-row">
         <div className="photo-container">
-          <img alt="my-photo" src="../imgs/photo-redona.svg" />
+          <img alt="my-photo" src="../imgs/photo-about.svg" />
         </div>
         <div className="content-container flex-container-column">
           <p>{sectionAbout.paragraf1}</p>
