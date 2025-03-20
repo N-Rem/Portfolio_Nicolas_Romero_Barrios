@@ -7,7 +7,9 @@ const PhotoPortfolio = ({ img, title, subtitle, linkGit, linkPage, date }) => {
   return (
     <div className="flex-container-column portfolio-container">
       <NavBar isForhero={true} />
-<div className="date-proyect-container"><p>{date}</p></div>
+      <div className="date-proyect-container">
+        <p>{date}</p>
+      </div>
       <div className="flex-container-column title-portfolio-container">
         <h2>{title}</h2>
         <p> {subtitle}</p>
@@ -28,7 +30,11 @@ const PhotoPortfolio = ({ img, title, subtitle, linkGit, linkPage, date }) => {
         )}
         {linkPage && (
           <a href={linkPage} target="_blank" aria-label="page">
-            <img className="page" src="/icons/social/earth-icon.svg" alt={title} />
+            <img
+              className="page"
+              src="/icons/social/earth-icon.svg"
+              alt={title}
+            />
           </a>
         )}
       </div>
@@ -41,7 +47,7 @@ PhotoPortfolio.propTypes = {
   subtitle: PropTypes.string.isRequired,
   linkGit: PropTypes.string.isRequired,
   linkPage: PropTypes.string.isRequired,
-  date:PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
 };
 
 export default PhotoPortfolio;
