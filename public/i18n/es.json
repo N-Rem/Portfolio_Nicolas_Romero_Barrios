@@ -133,7 +133,7 @@
       {
         "id": "1",
         "Portfolio": "Proyect",
-        "title": "Portfolio Samuel Carranza 1",
+        "title": "Portfolio Samuel Carranza",
         "img": "portfolioSC",
         "urlProyect": "/proyect",
         "subtitle": "Landing page desarrollada en React para exhibir el trabajo profesional de un fotógrafo y editor de videos.",
@@ -168,8 +168,8 @@
   },
   "404":{
     "title":"404 ERROR",
-    "subTitle": "La página que buscas no existe o ha sido movida.",
-    "paragraf":"Oops! Parece que te has perdido...",
+    "paragraf": "La página que buscas no existe o ha sido movida.",
+    "subTitle":"Oops! Parece que te has perdido...",
     "btn":"Home"
   },
 
