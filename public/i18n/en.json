@@ -174,8 +174,8 @@
   },
   "404": {
     "title": "404 ERROR",
-    "subTitle": "The page you’re looking for dosen’t exist or has been moved.",
-    "paragraf": "Oops! Looks likes you’ve got lost...",
+    "subTitle": "Oops! Looks likes you’ve got lost...",
+    "paragraf": "The page you’re looking for dosen’t exist or has been moved.",
     "btn": "Home"
   },
 
