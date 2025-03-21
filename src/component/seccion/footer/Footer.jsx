@@ -6,20 +6,27 @@ import { useNavigate } from "react-router-dom";
 import { TranslationContext } from "../../../context/TranslationContext";
 
 const Footer = () => {
-  const { sectionFooterSlogan, sectionFooterCopyright , sectionFooterBtn } =
+  const { sectionFooterSlogan, sectionFooterCopyright, sectionFooterBtn } =
     useContext(TranslationContext);
 
-
-
-  const navegate = useNavigate();
+  const navigate = useNavigate();
 
   const handlerBtnNav = (href) => {
     const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(`/${href}`);
+      setTimeout(() => {
+        const newTarget = document.querySelector(href);
+        if (newTarget) {
+          newTarget.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 50); // Espera 500ms para que la nueva página cargue antes de hacer scroll
     }
+
     const url = `/${href}`;
-    navegate(url);
+    navigate(url);
   };
 
   return (

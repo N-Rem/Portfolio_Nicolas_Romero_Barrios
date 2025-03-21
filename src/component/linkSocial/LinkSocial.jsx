@@ -37,7 +37,7 @@ const LinkSocial = ({ size, isForhero }) => {
         </div>
       )}
       <div className={isForhero ? `icons big` : `icons`}>
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/nicolas-romero-barrios-rem " target="_blank" aria-label="LinkedIn">
           <img src="/icons/social/linkedin-icon.svg" alt="LinkedIn" />
         </a>
       </div>
