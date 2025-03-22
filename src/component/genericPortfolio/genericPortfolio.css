@@ -20,7 +20,7 @@
     /* width     : 21rem;
     height       : 12.5rem; */
     width        : clamp(12rem, 12vw + 12rem, 21rem);
-    height       : clamp(9rem, 9vw + 9rem, 14rem);
+    height       : clamp(9.5rem, 9.5vw + 7.5rem, 18rem);
     border-radius: 1em;
     padding-top  : 10px;
 
