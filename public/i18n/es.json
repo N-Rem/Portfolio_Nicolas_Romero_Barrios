@@ -166,25 +166,28 @@
       }
     ]
   },
-  "404":{
-    "title":"404 ERROR",
+  "404": {
+    "title": "404 ERROR",
     "paragraf": "La página que buscas no existe o ha sido movida.",
-    "subTitle":"Oops! Parece que te has perdido...",
-    "btn":"Home"
+    "subTitle": "Oops! Parece que te has perdido...",
+    "btn": "Home"
   },
 
   "metadescription": {
-    "home": ".",
-    "404": "Parece que te has perdido en el camino. La página que buscas no existe o ha sido movida. ¡Vuelve a la página de inicio y sigue explorando!"
+    "home": "Desarrollo web a medida con tecnologías modernas. Creación de aplicaciones web, APIs.",
+    "404": "La página que buscas no está disponible. Vuelve al inicio y sigue explorando nuestras soluciones digitales."
   },
   "keywords": {
     "home": [
       "desarrollo web",
+      "full stack",
       "backend",
       "frontend",
-      "base de datos",
-      "aplicaciones web",
-      "desarrollo de APIs",
+      "APIs REST",
+      "MySQL",
+      "React",
+      "C#",
+      "ASP.NET Core",
       "Nicolas Romero Barrios"
     ],
     "404": [
@@ -192,8 +195,7 @@
       "página no encontrada",
       "contenido no disponible",
       "enlace roto",
-      "recurso no encontrado",
-      "CodeLens"
+      "recurso no encontrado"
     ]
   }
 }

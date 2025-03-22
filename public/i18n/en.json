@@ -180,26 +180,28 @@
   },
 
   "metadescription": {
-    "home": "En CodeLens creamos soluciones digitales a medida. Desarrollo web, diseño web, SEO y aplicaciones web para potenciar tu negocio en el mundo digital.",
-    "404": "Parece que te has perdido en el camino. La página que buscas no existe o ha sido movida. ¡Vuelve a la página de inicio y sigue explorando!"
+    "home": "Custom web development with modern technologies. Creation of web applications and APIs.",
+    "404": "The page you are looking for is not available. Return to the homepage and continue exploring our digital solutions."
   },
   "keywords": {
     "home": [
-      "desarrollo web",
+      "web development",
+      "full stack",
       "backend",
       "frontend",
-      "base de datos",
-      "aplicaciones web",
-      "desarrollo de APIs",
+      "REST APIs",
+      "MySQL",
+      "React",
+      "C#",
+      "ASP.NET Core",
       "Nicolas Romero Barrios"
     ],
     "404": [
       "error 404",
-      "página no encontrada",
-      "contenido no disponible",
-      "enlace roto",
-      "recurso no encontrado",
-      "CodeLens"
+      "page not found",
+      "content unavailable",
+      "broken link",
+      "resource not found"
     ]
   }
 }
