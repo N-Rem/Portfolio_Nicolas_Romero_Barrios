@@ -54,6 +54,10 @@ let sectionFooterSlogan = t("section.footer.slogan");
 let sectionFooterCopyright  = t("section.footer.copyright");
 let sectionFooterBtn = t("section.footer.btn");
 
+//meta Data para home
+let metadescriptionHome = t("metadescription.home");
+let keywordsHome = t("keywords.home", { returnObjects: true }).join(", ");
+
   return (
     <TranslationContext.Provider
       value={{
@@ -77,7 +81,10 @@ let sectionFooterBtn = t("section.footer.btn");
 
         sectionFooterSlogan,
         sectionFooterCopyright,
-        sectionFooterBtn
+        sectionFooterBtn,
+
+        metadescriptionHome,
+        keywordsHome
       }}
     >
       {children}
