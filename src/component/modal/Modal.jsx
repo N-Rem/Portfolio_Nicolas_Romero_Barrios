@@ -41,7 +41,7 @@ const Modal = ({ onCloseModal, title, text, onClose }) => {
           <button className="modal-cloes" onClick={onCloseModal}>
             <img
               className="icon-close"
-              src="/public/icons/close-icon.svg"
+              src="../icons/close-icon.svg"
               alt="icon close"
             />
           </button>
