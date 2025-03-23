@@ -41,9 +41,9 @@
     "close": "Cerrar",
     "about": {
       "title": "Acerca de mi",
-      "paragraf1": "Soy un desarrollador Full-Stack que disfruta de la tecnología, la programación y la resolución de problemas. Me destaco por mi habilidad de aprender de manera autodidacta, y por mi adaptabilidad y trabajo en equipo. Me gusta enfrentar desafíos que me permitan mejorar mis habilidades y adquirir nuevos conocimientos.",
-      "paragraf2": "En 2024 me gradué como Técnico Universitario en Programación en la Universidad Tecnológica Nacional. Cuento con experiencia en desarrollo backend así como en frontend.",
-      "paragraf3": "Busco una oportunidad para aplicar mis conocimientos en proyectos reales, seguir creciendo profesionalmente y contribuir a un equipo de desarrollo con compromiso y responsavilidad.",
+      "paragraf1": "Soy un desarrollador Full-Stack apasionado por la tecnología, la programación y la resolución de problemas. Me destaco por mi aprendizaje autodidacta, adaptabilidad y trabajo en equipo.",
+      "paragraf2": "En 2024, me gradué como Técnico Universitario en Programación en la UTN. Tengo experiencia en desarrollo backend y frontend.",
+      "paragraf3": "Busco una oportunidad para aplicar mis conocimientos, seguir creciendo profesionalmente y aportar con compromiso y responsabilidad a un equipo de desarrollo.",
       "invitation": "Puedes descargar mi Curriculum Vitae a continuación para más información.",
       "btnCv": "Descargar CV"
     },
@@ -55,21 +55,15 @@
           "title2": "Codelens",
           "title3": "Diciembre 2024 - Actualidad 2025",
           "description": "Colaboro como fullstack, trabajando en equipo con otros desarrolladores en diversos proyectos. Me adapto a las necesidades del proyecto, desempeñando roles tanto en frontend como en backend, aplicando tecnologías como React, C#, .NET y MySQL. Esta experiencia me ha permitido fortalecer mis habilidades técnicas y de trabajo en equipo en un entorno colaborativo."
-        },
-        {
-          "title1": "FullStack1",
-          "title2": "Codelens",
-          "title3": "Diciembre 2024 - Actualidad 2025",
-          "description": "Colaboro como fullstack, trabajando en equipo con otros desarrolladores en diversos proyectos. Me adapto a las necesidades del proyecto, desempeñando roles tanto en frontend como en backend, aplicando tecnologías como React, C#, .NET y MySQL. Esta experiencia me ha permitido fortalecer mis habilidades técnicas y de trabajo en equipo en un entorno colaborativo."
         }
       ]
     },
     "tech": {
       "title": "Tecnologias",
       "paragraf1": "Mi formación es FullStack.",
-      "paragraf2": "Mi enfoque se centra en la adaptabilidad a nuevas tecnologías y el trabajo en equipo, aplicando metodologías ágiles como Scrum y Kanban.",
-      "paragraf3": "En Frontend, cuento con experiencia en la creación de aplicaciones web pequeñas y medianas utilizando React, aplicando HTML, CSS y JavaScript, además de desarrollar algunas animaciones. También he trabajado con WordPress, creando complementos personalizados y optimizando funcionalidades.",
-      "paragraf4": "En el Backend, manejo C# con ASP.NET Core, Entity Framework y MySQL, permitiéndome desarrollar API REST y gestionar bases de datos de manera eficiente."
+      "paragraf2": " Me destaco por mi adaptabilidad a nuevas tecnologías y el trabajo en equipo, aplicando metodologías ágiles como Scrum y Kanban.",
+      "paragraf3": "En frontend, he desarrollado aplicaciones web con React, utilizando HTML, CSS y JavaScript, además de trabajar con animaciones.",
+      "paragraf4": "En backend, manejo C# con ASP.NET Core, Entity Framework y MySQL, lo que me permite desarrollar API REST y gestionar bases de datos de manera eficiente."
     },
     "contact": {
       "title": "Contactame",
@@ -137,8 +131,8 @@
         "img": "portfolioSC",
         "urlProyect": "/proyect",
         "subtitle": "Landing page desarrollada en React para exhibir el trabajo profesional de un fotógrafo y editor de videos.",
-        "description": "Landing page visualmente atractiva desarrollada en React que destaca el trabajo profesional de Samuel como fotógrafo y editor de videos. El sitio presenta una galería dinámica de fotografías y videos, complementada con secciones sobre su trayectoria profesional y experiencia laboral. La página incluye una sección 'Sobre mí' que permite conocer más sobre su historia y pasión por la fotografía, además de un formulario de contacto para potenciales clientes. El diseño minimalista y elegante permite que el contenido visual sea el protagonista, creando una experiencia inmersiva para los visitantes.",
-        "responsibilities": "Como desarrollador, fui responsable de la implementación de componentes y seguir el diseño realizado en figma. Me enfoqué en crear una experiencia de usuario fluida y atractiva, desarrollando elementos personalizados como la galería de imágenes tipo polaroid, la sección de experiencia y el coso t la cosa. Aseguré que el diseño fuera completamente responsivo para garantizar una experiencia óptima en todos los dispositivos.",
+        "description": "Una landing page atractiva y moderna desarrollada en React para resaltar el trabajo profesional de Samuel como fotógrafo y editor de videos. El sitio cuenta con una galería interactiva de fotos y videos, junto con secciones dedicadas a su trayectoria y experiencia. Además, incluye un apartado 'Sobre mí' donde comparte su historia y pasión por la fotografía, así como un formulario de contacto para clientes interesados. Su diseño elegante y minimalista pone el foco en el contenido visual, brindando una experiencia envolvente para los visitantes.",
+        "responsibilities": "Como desarrollador, me encargué de implementar componentes siguiendo el diseño establecido en Figma. Priorizé una experiencia de usuario fluida y atractiva, desarrollando elementos personalizados como un carrusel de imágenes, un formulario interactivo con validación de errores y la sección 'Sobre mí'. Además, optimicé el diseño para que fuera completamente responsivo, asegurando una visualización óptima en cualquier dispositivo.",
         "tech": [
           { "name": "git hub", "route": "github-icon" },
           { "name": "git", "route": "git-icon" },
