@@ -27,6 +27,13 @@
 
 @media(max-width: 750px){
     .content-tech-container{
-        width: clamp(10rem, 15vw + 15rem, 40rem);
+        width: clamp(25rem, 25vw + 25rem, 40rem);
+    }
+}
+
+
+@media(max-width: 500px){
+    .content-tech-container{
+        width: clamp(17rem, 17vw + 17rem, 35rem);
     }
 }

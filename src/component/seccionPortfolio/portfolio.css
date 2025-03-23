@@ -47,7 +47,7 @@
 }
 
 .photo-portfolio-container img:hover {
-    scale : 1.1;
+    scale : 1.05;
     border: 2px solid var(--pastel-green);
 }
 
