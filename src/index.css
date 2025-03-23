@@ -1,7 +1,7 @@
 :root {
   --black           : #042222;
   --blackT          : rgba(4, 34, 34, 0.5);
-  --white           : rgb(241, 247, 247);
+  --white           : #f1f7f7;
   --whiteT          : rgba(241, 247, 247, 0.5);
   --whiteT2         : rgba(241, 247, 247, .3);
   --dark-green      : #03624c;
