@@ -2,11 +2,14 @@
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-9px);
     }
+
     100% {
-        transform: translateY(0px); /* Vuelve a la posición original */
+        transform: translateY(0px);
+        /* Vuelve a la posición original */
     }
 }
 
@@ -24,7 +27,8 @@
     from {
         border-left: 4px solid var(--pastel-green);
     }
-    to{
+
+    to {
         border-left: 1px solid var(--pastel-green);
     }
 }
@@ -66,8 +70,8 @@
     margin-left: 2rem;
     gap        : 1rem;
     padding    : 0;
-    
-    padding-left: 1rem;
+
+    padding-left : 1rem;
     padding-right: 1rem;
 
     width : clamp(16rem, 16vw + 16rem, 32rem);
@@ -78,14 +82,14 @@
     /* font-size : clamp(.5rem, .6vw + .6rem, 1rem); */
     word-wrap : break-word;
     text-align: left;
-    max-width: 100%;
+    max-width : 100%;
 
 }
 
-.pharagraf-machin span{
+.pharagraf-machin span {
     position   : absolute;
     right      : 6vw;
-    /* left: 0vw; */
+    /* left    : 0vw; */
     width      : 0;
     background : var(--white);
     border-left: 3px solid var(--cyberpunk-yellow);
@@ -93,15 +97,17 @@
 }
 
 /* Seccion CV*/
-.buttonCv-container{
+.buttonCv-container {
     margin-top: 2rem;
-    gap:2rem;
+    gap       : 2rem;
 }
-.buttonCv-container p{
+
+.buttonCv-container p {
     /* font-size : clamp(.5rem, .6vw + .6rem, 1rem); */
     text-align: center;
 }
-.buttonCv-container a{
+
+.buttonCv-container a {
     text-decoration: none;
 }
 
@@ -116,10 +122,26 @@
     .content-container {
         margin-top : 1rem;
         margin-left: 0;
+        width: clamp(28rem, 28vw + 28rem, 45rem);
+
     }
 
     .content-container p {
         text-align: center;
 
+    }
+}
+
+
+
+@media(max-width: 600px) {
+    .content-container {
+        width: clamp(25rem, 22vw + 22rem, 40rem);
+    }
+}
+
+@media(max-width: 500px) {
+    .content-container {
+        width: clamp(15rem, 15vw + 15rem, 30rem);
     }
 }
