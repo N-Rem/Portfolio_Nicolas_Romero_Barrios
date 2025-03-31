@@ -7,7 +7,7 @@ const SliderTech = ({ techs }) => {
     { name: "C Sharp", route: "csharp-icon" },
     { name: "CSS", route: "css-icon" },
     { name: "Dot Net", route: "dotNet-icon" },
-    { name: "git hub", route: "github-icon" },
+    { name: "git-hub", route: "github-icon" },
     { name: "git", route: "git-icon" },
     { name: "Google Sheet", route: "googleSpreadsheet-icon" },
     { name: "HTML", route: "html-icon" },
@@ -15,8 +15,8 @@ const SliderTech = ({ techs }) => {
     { name: "MySQL", route: "mySQL-icon" },
     { name: "Python", route: "python-icon" },
     { name: "React", route: "react-icon" },
-    { name: "Visual Studio", route: "visualStudio-icon" },
-    { name: "VS Code", route: "vsCode-icon" },
+    { name: "Visual-Studio", route: "visualStudio-icon" },
+    { name: "VS-Code", route: "vsCode-icon" },
   ];
 
   return (
@@ -24,7 +24,7 @@ const SliderTech = ({ techs }) => {
       <div
         className="slider-itms-container "
         style={{
-          "--quantity": !techs ? iconTech.length : techs.length,
+          "--quantity": !techs ? iconTech.length  : techs.length,
         }}
       >
         {!techs
