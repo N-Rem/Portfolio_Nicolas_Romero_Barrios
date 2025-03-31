@@ -70,12 +70,12 @@
       "inputs": {
         "fullname": {
           "label": "Nombre y apellido",
-          "placeholder": "John Doe",
+          "placeholder": "Juan Perez",
           "validationError": "El campo debe tener entre 3 y 30 caracteres y contener sólo letras."
         },
         "email": {
           "label": "Email",
-          "placeholder": "example@example.com",
+          "placeholder": "guillermo@ejemplo.com",
           "invalidMailError": "Debe ingresar un email válido",
           "validationError": "El email debe tener entre 6 y 25 caracteres"
         },

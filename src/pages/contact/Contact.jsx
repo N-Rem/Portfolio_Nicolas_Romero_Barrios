@@ -167,7 +167,7 @@ const Contact = () => {
     >
       <h2 className="title-contact">{sectionContact.title}</h2>
       <div className="container-form-section flex-container-column">
-        <form className="form-container">
+        <form className="form-container ">
           <div className="form-group flex-container-column">
             <label className="label-text">
               {sectionContact.inputs.fullname.label}

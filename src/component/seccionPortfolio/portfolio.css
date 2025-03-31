@@ -6,7 +6,7 @@
 
 .date-proyect-container {
     width: clamp(20rem, 27vw + 27rem, 45rem);
-
+    margin-top: 5vh;
     display        : flex;
     flex-direction : row;
     align-items    : flex-start;
@@ -58,6 +58,8 @@
 .icons-portfolio-container {
     width: clamp(32rem, 32vw + 32rem, 62rem);
     gap  : 3rem;
+    
+    margin-top: 4vh;
 
 }
 
@@ -114,7 +116,9 @@
     }
 
     .date-proyect-container {
+        
         width: clamp(15rem, 10vw + 15rem, 40rem);
     }
-
+    
+    
 }

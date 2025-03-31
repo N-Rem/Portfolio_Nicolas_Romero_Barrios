@@ -127,8 +127,8 @@
 
   "portfolios": {
     "title": "Portfiolio",
-    "subtitle1": "Proyectos",
-    "subtitle2": "Colaboraciones",
+    "subtitle1": "Projects",
+    "subtitle2": "Collaborations",
     "portfolio": [
       {
         "id": "1",
