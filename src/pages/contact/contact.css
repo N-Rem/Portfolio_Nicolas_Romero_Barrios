@@ -149,7 +149,7 @@
     white-space: wrap;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 520px) {
 
     .form-control {
         width : clamp(15rem, 15vw + 15rem, 30rem);
