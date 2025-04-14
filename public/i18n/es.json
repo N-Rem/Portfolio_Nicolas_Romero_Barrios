@@ -157,6 +157,40 @@
             "portfolio"
           ]
         }
+      },
+      {
+        "id": "2",
+        "Portfolio": "Proyect",
+        "title": " Tool Project Manager",
+        "img": "BaseApi",
+        "urlProyect": "/proyect",
+        "subtitle": "Gestión de herramientas, proyectos y usuarios con autenticación JWT y envío de emails.",
+        "description": "Tool Project Manager es una API REST desarrollada con ASP.NET Core utilizando Clean Architecture, utilizando Entity Framework Core como ORM y PostgreSQL como base de datos (anteriormente MySQL). La API permite gestionar usuarios de tres tipos (Administrador, Empleado y Cliente), proyectos y herramientas asociadas a los empleados. Incluye autenticación JWT, recuperación de contraseñas por email mediante MailKit y despliegue en Render.com.",
+        "responsibilities": "Me encargué del diseño y desarrollo de la API aplicando Clean Architecture, implementando autenticación y autorización mediante JWT, y configurando la recuperación de contraseñas a través de MailKit. Adapté la base de datos de MySQL a PostgreSQL para su despliegue en Render.com, definiendo una estructura sencilla pero flexible con relaciones entre usuarios, herramientas y proyectos. Además, creé un base repository para centralizar operaciones comunes (las operaciones de CRUD), documenté los endpoints y las políticas de seguridad utilizando Swagger con soporte para JWT, configuré las migraciones con Entity Framework Core y añadí HealthChecks para facilitar el monitoreo de la API.",
+        "tech": [
+          { "name": "git hub", "route": "github-icon" },
+          { "name": "git", "route": "git-icon" },
+          { "name": "CSS", "route": "css-icon" },
+          { "name": "C Sharp", "route": "csharp-icon" },
+          { "name": "Dot Net", "route": "dotNet-icon" },
+          { "name": "Visual-Studio", "route": "visualStudio-icon" }       
+        ],
+        "linkPage": "https://tool-project-managerapibase.onrender.com/swagger/index.html",
+        "linkGit": "https://github.com/N-Rem/Tool-Project-ManagerApiBase",
+        "date": "Fecha: Abril 2025",
+        "metadescription": {
+          "description": "."
+        },
+        "keywords": {
+          "home": [
+            "App web",
+            "backend",
+            "desarrollo de APIs",
+            "portfolio",
+            "poryecto",
+            "APIs REST"
+          ]
+        }
       }
     ]
   },
