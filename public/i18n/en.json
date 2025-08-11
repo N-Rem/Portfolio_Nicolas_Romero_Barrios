@@ -150,7 +150,7 @@
         ],
         "linkPage": "https://samuel-carranza.vercel.app/",
         "linkGit": "https://github.com/Codelens-work/-Portfolio-Samuel-Carranza",
-        "date": "Fecha: Diciembre 2025",
+        "date": "Date: December  2024",
         "metadescription": {
           "description": "."
         },
@@ -161,6 +161,41 @@
             "aplicaciones web",
             "desarrollo de APIs",
             "portfolio"
+          ]
+        }
+      },
+
+      {
+        "id": "2",
+        "Portfolio": "Project",
+        "title": "Tool Project Manager",
+        "img": "BaseApi",
+        "urlProyect": "/proyect",
+        "subtitle": "Management of tools, projects, and users with JWT authentication and email sending.",
+        "description": "Tool Project Manager is a REST API developed with ASP.NET Core using Clean Architecture, with Entity Framework Core as the ORM and PostgreSQL as the database (previously MySQL). The API allows the management of three types of users (Administrator, Employee, and Client), projects, and tools associated with employees. It includes JWT authentication, password recovery via email using MailKit, and deployment on Render.com.",
+        "responsibilities": "I was responsible for the design and development of the API applying Clean Architecture, implementing authentication and authorization using JWT, and configuring password recovery through MailKit. I adapted the database from MySQL to PostgreSQL for deployment on Render.com, defining a simple yet flexible structure with relationships between users, tools, and projects. Additionally, I created a base repository to centralize common operations (CRUD operations), documented the endpoints and security policies using Swagger with JWT support, configured migrations with Entity Framework Core, and added HealthChecks to facilitate API monitoring.",
+        "tech": [
+          { "name": "git hub", "route": "github-icon" },
+          { "name": "git", "route": "git-icon" },
+          { "name": "CSS", "route": "css-icon" },
+          { "name": "C Sharp", "route": "csharp-icon" },
+          { "name": "Dot Net", "route": "dotNet-icon" },
+          { "name": "Visual-Studio", "route": "visualStudio-icon" }
+        ],
+        "linkPage": "https://tool-project-managerapibase.onrender.com/swagger/index.html",
+        "linkGit": "https://github.com/N-Rem/Tool-Project-ManagerApiBase",
+        "date": "Date: April 2025",
+        "metadescription": {
+          "description": "."
+        },
+        "keywords": {
+          "home": [
+            "App web",
+            "backend",
+            "development APIs",
+            "portfolio",
+            "poryect",
+            "APIs REST"
           ]
         }
       }
